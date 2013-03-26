@@ -1,0 +1,1 @@
+<cfsilent><!--- inserts the year ---></cfsilent><cfif thisTag.executionMode IS "start"><cfset thisTag.OurContent = year(now()) /></cfif><cfif thisTag.executionMode IS "end"><cfset thisTag.GeneratedContent = "" /><cfoutput>#thisTag.OurContent#</cfoutput></cfif>

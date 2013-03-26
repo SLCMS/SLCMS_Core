@@ -1,0 +1,489 @@
+html {
+	font-size:100.01%
+}
+
+body 
+{
+	margin:0px;
+	padding:10px;
+	background: #f0f0f0;
+/*	background: #f0f0f0 url(StylingGraphics/background.gif) repeat-y 50% 0; */
+}
+
+form {
+	padding:0px;
+	margin:0px;
+}
+
+body, td 
+{
+	font-family: "Trebuchet MS", verdana, arial, sans-serif; 
+	font-size: 0.95em; 
+}
+
+#banner 
+{
+	font-size:28px;
+	color:#999;
+	margin-bottom:10px;
+	padding-left:20px;
+}
+
+#banner .tagline {
+	font-size:13px;
+}
+
+/* navigation styles */
+#LHNav {
+	margin:0px 0px 0px 0px;
+	padding:3px 0px 0px 6px;
+	list-style-type: none;
+/*	width: 19%;
+	float: left;
+	border-right: 1px solid #000;*/
+}
+#LHNav li, #LHNav ul li {
+	list-style-type: none;
+}
+
+#LHNav li ul, #LHNav li ul li {
+	padding:0px 0px 0px 6px;
+}
+
+#footer
+{
+	clear:both;
+	color:#999;
+	text-align:center;
+	font-size:9px;
+}
+
+A 			{ color: #0000cc; text-decoration:none; }
+A:hover		{ color: #0000cc; text-decoration:underline; } 
+
+.date 
+{
+	color:#999;
+	font-size:16px;
+	border-bottom:1px Solid #999;
+	margin-bottom:5px;
+}
+
+.title a, .title a:hover
+{
+	color:#4D0;
+	font-size:18px;
+	font-weight:bold;
+}
+
+.code {
+	font-family: courier;
+	font-size: 11px;
+	border: solid thin #ccc;
+	background-color: #eee;
+	border-collapse:collapse;
+}
+
+
+
+.pod 
+{
+	text-align:center;
+}
+
+.pod3LeftTitle 
+{
+	color:#999;
+	background: url(StylingGraphics/pod_title3L.gif);
+	background-repeat: no-repeat;
+	font-size:1.1em;
+	padding-top:10px;
+	height:21px;
+}
+
+.pod3LeftFooter {
+	background: url(StylingGraphics/pod_bottom3L.gif);
+	background-repeat: no-repeat;
+	height:23px;
+}
+
+.pod3LeftBody {
+	background: url(StylingGraphics/pod_body3L.gif);
+	background-repeat: repeat-y;
+	width:222px;
+}
+
+.pod3RightTitle 
+{
+	color:#999;
+	background: url(StylingGraphics/pod_title3R.gif);
+	background-repeat: no-repeat;
+	font-size:1.1em;
+	padding-top:10px;
+	height:21px;
+}
+
+.pod3RightFooter {
+	background: url(StylingGraphics/pod_bottom3R.gif);
+	background-repeat: no-repeat;
+	height:23px;
+}
+
+.pod3RightBody {
+	background: url(StylingGraphics/pod_body3R.gif);
+	background-repeat: repeat-y;
+	width:222px;
+}
+
+.podInnerBody {
+	width:180px;
+	padding: 5px 25px 0px 25px;
+}
+
+.podInnerBodyLeftAlign {
+	text-align:left;
+	width:180px;
+	padding:0px 25px 0px 25px;
+}
+
+.podInnerBodyRightAlign {
+	text-align:right;
+	width:180px;
+	padding:0px 25px 0px 25px;
+}
+
+.byline 
+{
+	color:#999;
+}
+
+.byline a
+{
+	color:#999;
+}
+
+.header 
+{
+	text-align:center;
+}
+
+.calendar_table td {
+	text-align:center;
+}
+
+/* Header Pod definitions and border graphics insertion  */
+
+/* this is the table sets of styles while we work out how to do it properly.... */
+
+.HdrTbl {
+	margin: 0 0px 0 8px; padding: 0 16px 0px 0;
+}
+
+.HdrLeft {
+	margin: 0; padding: 12px 0px 12px 10px;
+	background: transparent url(StylingGraphics/Pod-InsideShade124h.gif) no-repeat left top;
+}
+/*
+.HdrMid {
+	margin: 0; padding: 12px -50px 5px 0px;
+	background: transparent url(StylingGraphics/Pod-InsideShade124h.gif) repeat-x top;
+}
+*/
+.HdrRight {
+ margin: 0; padding: 12px 10px 12px 10px;
+ background: transparent url(StylingGraphics/Pod-InsideShade124h.gif) no-repeat right top;
+}
+.HeaderWrap {
+ margin: 0; padding: 0 0px 0 0;
+}
+.HeaderTop {
+ margin: 0; padding: 0 50px 0 0;
+ background: transparent url(StylingGraphics/shadow3.gif) repeat-y right top;
+}
+.HeaderTop h1 {
+ margin: 0; padding: 30px 0 0 50px;
+ background: transparent url(StylingGraphics/shadow3.gif) no-repeat left top;
+ font-size: 120%;
+}
+.HeaderBottom {
+ margin: 0 0 0 0; padding: 0 50px 0 0;
+ background: transparent url(StylingGraphics/shadow3.gif) repeat-y right bottom;
+}
+.HeaderBottom p {
+ margin: 0; padding: 10px 0 30px 50px;
+ background: transparent url(StylingGraphics/shadow3.gif) no-repeat left bottom;
+}
+
+.HeaderPRight {
+ margin: 0; padding: 10px 0 0 50px;
+ background: transparent url(StylingGraphics/shadow3-repeat.gif) repeat-y 0 0;
+}
+
+.HeaderP p {
+ text-align:left;
+ margin: 0; padding: 10px 0 0 50px;
+ background: transparent url(StylingGraphics/shadow3-repeat.gif) repeat-y 0 0;
+}
+
+.HeaderP {
+ margin: 0; padding: 0 50px 0 0;
+ background: transparent url(StylingGraphics/shadow3-repeat.gif) repeat-y 100% 0;
+}
+
+/* Page_CentreContent Pod definitions and border graphics insertion with Tools */
+
+.ContentTopLeft {
+ margin: 0; padding: 0 50px 0 0;
+ background: transparent url(StylingGraphics/shadow.gif) repeat-y right top;
+}
+.ContentTopRight {
+ margin: 0; padding: 50px 0 0 50px;
+ background: transparent url(StylingGraphics/shadow.gif) no-repeat left top;
+ font-size: 120%;
+}
+.ContentBottom {
+	margin: 0; padding: 0 50px 0 0;
+	background: transparent url(StylingGraphics/shadow.gif) repeat-y right bottom;
+}
+.ContentBottom p {
+ margin: 0; padding: 0px 0 30px 50px;
+ background: transparent url(StylingGraphics/shadow.gif) no-repeat left bottom;
+}
+.ContentBodyLeft {
+ margin: 0; padding: 0 50px 0 0;
+ background: transparent url(StylingGraphics/shadow-repeat.gif) repeat-y 100% 0;
+}
+.ContentBodyRight {
+ margin: 0; padding: 10px 0 0 40px;
+ background: transparent url(StylingGraphics/shadow-repeat.gif) repeat-y 0 0; 
+}
+
+.ContentBodyWrapper {
+	margin: -45px -30px 0 -20px; padding: 0px;
+}
+.ContentBodyWrapper p {
+ margin: 0; padding: 0px 0 0 0px;
+}
+
+.ContentBottomWithTools {
+	margin: 0; padding: 0px 50px 0px 0;
+	text-align:left;
+	background: transparent url(StylingGraphics/shadow.gif) repeat-y right bottom;
+}
+.ContentBottomWithTools p {
+ margin: 0; padding: 10px 0 5px 50px;
+ background: transparent url(StylingGraphics/shadow.gif) no-repeat left bottom;
+}
+
+.tools {
+	text-align:left;
+	margin:  0px 0px -20px -20px; padding: 0px 0px 0px 0px;
+/*	background: transparent url(StylingGraphics/shadow.gif) repeat-y left bottom;*/
+}
+
+/* the two lower content pods on the Home Page */
+#ContentHomePageBottomLeft {
+ width:49%; float:left;
+}
+#ContentHomePageBottomRight {
+ width:49%; float:right;
+}
+
+
+/* Page Footer Pod definitions and border graphics insertion  */
+
+.FooterTop {
+ text-align: center;
+ margin: 2px 0 0 0; padding: 0 50px 0 0;
+ background: transparent url(StylingGraphics/shadow3.gif) repeat-y right top;
+}
+.FooterTop p {
+ margin: 0; padding: 15px 0 0 50px;
+ background: transparent url(StylingGraphics/shadow3.gif) no-repeat left top;
+ font-size: 0.8em;
+}
+.FooterBottom {
+ text-align: center;
+ margin: 0; padding: 0 50px 0 0;
+ background: transparent url(StylingGraphics/shadow3.gif) repeat-y right bottom;
+}
+.FooterBottom p {
+ margin: 0; padding: 10px 0 30px 50px;
+ background: transparent url(StylingGraphics/shadow3.gif) no-repeat left bottom;
+ font-size: 0.8em;
+}
+.FooterP p {
+ margin: 0; padding: 10px 0 0 50px;
+ background: transparent url(StylingGraphics/shadow3-repeat.gif) repeat-y 0 0;
+ text-align: center;
+ font-size: 0.8em;
+}
+.FooterP {
+ margin: 0; padding: 0 50px 0 0;
+ text-align: center;
+ background: transparent url(StylingGraphics/shadow3-repeat.gif) repeat-y 100% 0;
+}
+
+/* a section on the blog part of the site*/
+/* formatting for the calendar, cloned from BlogCFM, as was the calendar itself */
+table.cfmcal {
+	empty-cells: show;
+	border-collapse: collapse;
+	border: 1px solid #AAAAAA;
+	padding: 0px;
+	width: 170px;
+	margin-bottom: 1px;
+	font-size: 0.95em;
+}
+table.cfmcal td {
+	text-align: right;
+	border: 0px solid #F0F0F0;
+	padding: 2px 7px 2px 1px;
+}
+table.cfmcal tr.header td {
+	text-align: center;
+	font-weight: bold;
+	background-color: #EEEEEE;
+/*	font-size: 14px;*/
+	font-size: 1.0em;
+	color: #444;
+/*	font-variant: small-caps;*/
+}
+table.cfmcal tr.header td A {
+	text-decoration: none;
+}
+table.cfmcal tr.weekdays td {
+	text-align: center;
+	font-weight: bold;
+	background-color: #EEEEEE;
+	color: #444;
+	height: 1.6em;
+}
+.day_blank {
+	background-color: #e0e0e0;
+	height: 1.2em;
+}
+
+table.cfmcal tr td.day_now {
+	text-align: right;
+	background-color: #F0F0F0;
+	height: 1.2em;
+}
+table.cfmcal tr td.day_now A {
+	color: black;
+}
+
+table.cfmcal tr td.day_highlighted {
+	text-align: right;
+	background-color: #AAAAAA;
+	border: 1px Solid #AAA;
+	height: 1.2em;
+}
+table.cfmcal tr td.day_highlighted A {
+	color: white;
+}
+
+table.cfmcal tr td.day_selected {
+	text-align: right;
+	background-color: #EEEEEE;
+	border: 1px Solid #999;
+	height: 1.2em;
+}
+table.cfmcal tr td.day_selected A {
+	color: black;
+}
+
+table.cfmcal tr td.day_selected_highlighted {
+	text-align: right;
+	background-color: #AAAAAA;
+	border: 1px Solid #111111;
+	height: 1.2em;
+}
+table.cfmcal tr td.day_selected_highlighted A {
+	color: black;
+}
+
+table.cfmcal tr td.day {
+	text-align: right;
+	background-color: #ffffff;
+	height: 1.2em;
+}
+
+/* the Blog Category list in its pod */
+.BlogCategories {
+	padding: 0px;
+}
+.BlogCategories ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 20px;
+}
+.BlogCategories A {
+	color: #222288; 
+	text-decoration:none; 
+}
+.BlogCategories A:hover	{
+	color: #222288; 
+	text-decoration:underline;
+}
+
+/* these relate to the header of the blog page, tools and datetime, etc */
+.BlogHeaderToolsUpper {
+	margin: 5px 0px 0px 0px;
+	padding: 0px 0px 5px 0px;
+	width:100%; 
+}
+.BlogHeaderDisplay {
+	width:70%; 
+	float:left;
+	color:#666666;
+	font-size: 1.2em;
+	font-weight:bold;
+}
+.BlogAddEntryButton {
+	float:right;
+	text-align:right;
+}
+.BlogHeaderToolsLower {
+	margin: 5px 0px 0px 0px;
+	padding: 0px 0px 5px 0px;
+	clear:both;
+}
+
+/*these are the display divs for the actual blog content*/
+.BlogContainer_Title {
+	color:#444444;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.BlogContainer_Summary {
+	color:#666666;
+	font-size: 1.0em;
+	font-weight: bold;
+}
+.BlogContainer_Content {
+	color:#444444;
+	font-size: 1.0em;
+	font-weight: normal;
+}
+.BlogLink_More {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float:left;
+	font-size: 0.9em;
+	text-align:left;
+}
+.BlogLink_More A {
+	color: #000066; 
+	text-decoration:underline;	
+}
+.BlogLink_More A:hover {
+	color: #000022; 
+	background: #EEE;
+	text-decoration:underline overline;	
+}
+.BlogLink_Clear {
+	clear:both;
+}
+
+
+

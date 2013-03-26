@@ -1,0 +1,56 @@
+/*
+ * Style Sheet for the Search Results 
+ * 
+ */
+
+.SearchResultsWrapper {
+   width:90%;
+   padding:5px;
+}
+
+.SingleResultWrapper {
+   width:100%;
+   border-bottom:solid 1px;
+}
+
+.SearchHeadingWrapper {
+    padding: 5px 0 5px 0;
+}
+
+.PageHeading {
+}
+
+.PageHeadingLabel {
+	font-weight:bold;
+}
+
+.ScoreHeading {
+}
+
+.ScoreHeadingLabel {
+	font-weight:bold;
+}
+
+.LastEditedHeading {
+}
+
+.LastEditedHeadingLabel {
+	font-weight:bold;
+}
+
+.SearchContextWrapper {
+    padding: 5px 0 5px 0;
+}
+
+.ContextHeading {
+	font-weight:bold;
+}
+
+.ContextText {
+	background-color:#EEEEEE;
+}
+
+.ContextText b {
+	background-color:#FFFF44;
+}
+

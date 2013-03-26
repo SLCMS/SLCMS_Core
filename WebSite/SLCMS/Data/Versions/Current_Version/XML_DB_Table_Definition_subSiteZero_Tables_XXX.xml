@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+	<table name="slcms_site_0_content_content">
+		<!--
+		<field allownulls="no" cf_datatype="cf_sql_idstamp" columnname="repid" default="newid()" precision="12" primarykey="true" scale="2"/>
+		-->
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="contentid" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="contentchunk" length="4000" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="contentchunknumber" precision="10" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_bit" columnname="flag_currentversion" default="1" precision="1" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="contenttypeid" default="1" precision="10" scale="2"/>
+	</table>
+</tables>

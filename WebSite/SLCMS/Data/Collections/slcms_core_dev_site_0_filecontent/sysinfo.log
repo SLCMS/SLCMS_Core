@@ -1,0 +1,7 @@
+
+
+Mon Oct 01 10:47:51 2012
+msg(1): Error   E0-0900 (Io): Couldn't delete C:\Web_Dev\VCSControlledSpace\SLCMS\SLCMS_Core_Development_Space\WebSite\SLCMS\Data\Collections\slcms_core_dev_site_0_filecontent\trans\data.trn
+    delete error 13 (Permission denied)
+Mon Oct 01 10:47:51 2012
+msg(1): Error   E0-0902 (Io): Couldn't rename C:\Web_Dev\VCSControlledSpace\SLCMS\SLCMS_Core_Development_Space\WebSite\SLCMS\Data\Collections\slcms_core_dev_site_0_filecontent\trans\temp.trn to C:\Web_Dev\VCSControlledSpace\SLCMS\SLCMS_Core_Development_Space\WebSite\SLCMS\Data\

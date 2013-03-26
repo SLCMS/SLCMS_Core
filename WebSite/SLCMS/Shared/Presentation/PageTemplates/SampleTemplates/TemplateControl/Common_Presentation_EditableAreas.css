@@ -1,0 +1,41 @@
+/* 
+ * Presentation Stylesheet for the editable content areas
+ *                 
+ * The styles that live here are the ones that you want to feed into the WYSIWYG editor 
+ * This stylesheet name is the default name that SLCMS will look for to hand to the WYSIWYG editor, 
+ * other names can be specified in the SLCMS displayContent or displayContainer tags or the Page's Properties
+ * 
+ * These styles have to be complete in themselves and not use any inheritance from styles outside this sheet
+ * as the WYSIWYG editor opens in an iframe and so is not inheriting the parent page's styles.
+ *  
+ */
+
+
+body {
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:0.86em;
+}
+
+
+h1 {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+h4 {
+	font-size:1.0em;
+	font-weight:bold;
+ }
+
+p {
+	font-size:1.0em;
+}
+
+.oddclass  {
+	padding:0.5em;
+} 
+
+.backblue {
+	background-color: Blue;
+}
+ 

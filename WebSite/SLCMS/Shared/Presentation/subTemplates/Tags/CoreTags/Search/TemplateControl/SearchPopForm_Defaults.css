@@ -1,0 +1,117 @@
+/*
+ the styling for the search form in its various presentation styles
+*/
+/*
+ Pod style
+*/
+#SearchPodContainer {
+	width:300px;
+	height:35px;
+	padding:0px;
+	margin:0px;
+	background-image:url(StylingGraphics/SearchPodBackground.png);	
+	background-repeat:no-repeat;
+}
+#SearchInputWrap {
+	width:190px;
+	height:35px;
+	margin:0px 0px 0px 84px;
+	padding:8px 0px 0px 0px;
+}
+#SearchPodTerm {
+	width:190px;
+	height:18px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+#SearchPod_submit {
+	float:right;
+	width:20px;
+	height:35px;
+	padding:0px;
+	margin:0px;
+	background-image:url(StylingGraphics/SearchPodBackground.png);	
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:right; 
+}
+#SearchPod_submit a:hover {
+  text-decoration:none;
+}
+	
+/*
+	Full form
+*/
+#SearchContainer {
+    width:325px;
+    margin:0 auto;
+    position: relative;
+}
+
+#content {
+    width:520px;
+    min-height:500px;
+}
+a:link, a:visited {
+    color:#27b;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+a img {
+    border-width:0;
+}
+#SignInNav {
+    padding:10px 0px 12px;
+    font-size:11px;
+    line-height:23px;
+    text-align:right;
+}
+#SignInNav a.signinUp, a.signinDown {
+    background:#88bbd4;
+    padding:4px 6px 6px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#fff;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+#SignInNav a.signin:hover {
+    background:#59B;
+}
+#SignInNav a.signin, #SignInNav a.signin:hover {
+    *background-position:0 3px!important;
+}
+
+
+/*
+form bit
+*/
+#SearchPodTerm {
+	width:225px;
+}
+#SearchTerm {
+	width:175px;
+}
+#SearchPreText {
+	float:left;
+  font-size:11px;
+	padding: 4px 3px 0px 0px;
+}
+
+#Search_submit {
+	background:#88bbd4;
+	border:1px solid #39D;
+	color:#fff;
+	font-size:11px;
+	float:right;
+	width:6em;
+	padding:3px;
+	margin: 7px 0px 0 0;
+	font-weight:bold;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
