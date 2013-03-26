@@ -1,0 +1,20 @@
+<p>
+	If this installation of SLCMS is one of many on this machine/server then here is where you manage that fact. 
+</p>
+<p>
+	If this installation is a single installation on a shared or standalone server or your workstation or wherever then just say &quot;No&quot;.	
+</p>
+<p>
+	If you are going to have several SLCMS sites sitting alongside each other performing the same role such as several Production sites then say &quot;No&quot;.	
+</p>
+<p>
+	If you are going to have several SLCMS sites sitting alongside each other performing different roles
+	(for example if you are in a development environment with one site being used for code development and another for designing templates)
+	then say &quot;Yes&quot; and the Wizard will adjust the configuration to compensate.
+</p>
+<p>
+	In case you are wondering why we have to know this it is because of the way that SLCMS starts up and works out what it is doing.
+	On startup it asks the machine/workstation/server what name it has and then looks that name up in its configuration files to choose the correct one and then it can run the website correctly.
+	If it did not do this but just started up with a standard configuration then you would not be able to run many copies of SLCMS side by side performing different roles, 
+	they would all have to be the same.
+</p>

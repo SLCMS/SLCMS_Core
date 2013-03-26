@@ -1,0 +1,106 @@
+20120801 20:01:46.682 - SLCMS_Utility Init() after variables.LogFolder set
+20120801 20:01:46.791 - SLCMS_Utility Init() Finished
+20120801 20:01:46.911 - Version Control-Master Init() Started
+20120801 20:01:46.931 - Version Control-Master Init() Finished
+20120801 20:01:50.744 - PortalControl Init() Started
+20120801 20:01:51.145 - PortalControl Init() Finished
+20120801 20:01:51.150 - PageStructure Init() Started
+20120801 20:01:52.365 - PageStructure Init() Finished
+20120801 20:01:52.367 - Content-Database I/O Init() Started
+20120801 20:01:52.368 - Content-Database I/O ReInitAfter() Started
+20120801 20:01:52.913 - Content-Database I/O ReInitAfter() Finished
+20120801 20:01:52.915 - Content-Database I/O Init() Finished
+20120801 20:01:52.916 - TemplateManagement Init() Started
+20120801 20:01:52.918 - TemplateManagement ReInit() Started
+20120801 20:01:53.362 - TemplateManagement ReInit() Finished
+20120801 20:01:53.363 - TemplateManagement Init() Finished
+20120801 20:01:53.365 - UserControl Init() Started
+20120801 20:01:53.729 - UserControl Init() Finished
+20120801 20:01:53.731 - UserPermission Init() Started
+20120801 20:01:53.732 - UserPermission Init() Finished
+20120801 20:01:53.734 - FormHandler Started
+20120801 20:01:53.735 - FormHandler Finished
+20120801 20:01:53.737 - ContentSearch I/O Started
+20120801 20:01:55.188 - ContentSearch I/O Finished
+20120801 20:01:57.328 - System_ModuleManager Init() Started
+20120801 20:01:57.335 - System_ModuleManager Init() Finished
+20120804 18:22:50.677 - SLCMS_Utility Init() after variables.LogFolder set
+20120804 18:22:50.771 - SLCMS_Utility Init() Finished
+20120804 18:22:50.777 - Version Control-Master Init() Started
+20120804 18:22:50.784 - Version Control-Master Init() Finished
+20120804 18:22:51.590 - PortalControl Init() Started
+20120804 18:22:51.858 - PortalControl Init() Finished
+20120804 18:22:51.899 - PageStructure Init() Started
+20120804 18:22:52.948 - PageStructure Init() Finished
+20120804 18:22:52.950 - Content-Database I/O Init() Started
+20120804 18:22:52.951 - Content-Database I/O ReInitAfter() Started
+20120804 18:22:53.550 - Content-Database I/O ReInitAfter() Finished
+20120804 18:22:53.552 - Content-Database I/O Init() Finished
+20120804 18:22:53.554 - TemplateManagement Init() Started
+20120804 18:22:53.556 - TemplateManagement ReInit() Started
+20120804 18:22:53.941 - TemplateManagement ReInit() Finished
+20120804 18:22:53.943 - TemplateManagement Init() Finished
+20120804 18:22:53.944 - UserControl Init() Started
+20120804 18:22:54.300 - UserControl Init() Finished
+20120804 18:22:54.302 - UserPermission Init() Started
+20120804 18:22:54.303 - UserPermission Init() Finished
+20120804 18:22:54.304 - FormHandler Started
+20120804 18:22:54.306 - FormHandler Finished
+20120804 18:22:54.308 - ContentSearch I/O Started
+20120804 18:22:55.507 - ContentSearch I/O Finished
+20120804 18:22:57.343 - System_ModuleManager Init() Started
+20120804 18:22:57.347 - System_ModuleManager Init() Finished
+20120804 21:08:18.747 - SLCMS_Utility Init() after variables.LogFolder set
+20120804 21:08:19.238 - SLCMS_Utility Init() Finished
+20120804 21:08:19.350 - Version Control-Master Init() Started
+20120804 21:08:19.388 - Version Control-Master Init() Finished
+20120804 21:08:23.83 - PortalControl Init() Started
+20120804 21:08:23.927 - PortalControl Init() Finished
+20120804 21:08:23.931 - PageStructure Init() Started
+20120804 21:08:25.765 - PageStructure Init() Finished
+20120804 21:08:25.767 - Content-Database I/O Init() Started
+20120804 21:08:25.769 - Content-Database I/O ReInitAfter() Started
+20120804 21:08:27.258 - Content-Database I/O ReInitAfter() Finished
+20120804 21:08:27.259 - Content-Database I/O Init() Finished
+20120804 21:08:27.260 - TemplateManagement Init() Started
+20120804 21:08:27.262 - TemplateManagement ReInit() Started
+20120804 21:08:27.745 - TemplateManagement ReInit() Finished
+20120804 21:08:27.746 - TemplateManagement Init() Finished
+20120804 21:08:27.747 - UserControl Init() Started
+20120804 21:08:28.657 - UserControl Init() Finished
+20120804 21:08:28.659 - UserPermission Init() Started
+20120804 21:08:28.661 - UserPermission Init() Finished
+20120804 21:08:28.664 - FormHandler Started
+20120804 21:08:28.676 - FormHandler Finished
+20120804 21:08:28.679 - ContentSearch I/O Started
+20120804 21:08:30.150 - ContentSearch I/O Finished
+20120804 21:08:32.768 - System_ModuleManager Init() Started
+20120804 21:08:32.777 - System_ModuleManager Init() Finished
+20120804 21:30:36.648 - System_ModuleManager ReInitModulesAfter() Started
+20120804 21:30:36.658 - System_ModuleManager ReInitModulesAfter() Finished
+20120804 22:22:35.749 - System_ModuleManager ReInitModulesAfter() Started
+20120804 22:22:35.752 - System_ModuleManager ReInitModulesAfter() Finished
+20120809 20:34:36.335 - System_ModuleManager ReInitModulesAfter() Started
+20120809 20:34:36.337 - System_ModuleManager ReInitModulesAfter() Finished
+20120809 22:20:24.738 - UserPermission Init() Started
+20120809 22:20:24.740 - UserPermission Init() Finished
+20120810 20:09:55.251 - System_ModuleManager ReInitModulesAfter() Started
+20120810 20:09:55.253 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 20:14:07.601 - System_ModuleManager ReInitModulesAfter() Started
+20120810 20:14:07.603 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 20:18:08.734 - System_ModuleManager ReInitModulesAfter() Started
+20120810 20:18:08.736 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 22:03:54.92 - System_ModuleManager ReInitModulesAfter() Started
+20120810 22:03:54.95 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 22:04:33.522 - System_ModuleManager ReInitModulesAfter() Started
+20120810 22:04:33.524 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 22:09:50.86 - System_ModuleManager ReInitModulesAfter() Started
+20120810 22:09:50.88 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 22:09:54.902 - System_ModuleManager ReInitModulesAfter() Started
+20120810 22:09:54.904 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 22:10:31.652 - System_ModuleManager ReInitModulesAfter() Started
+20120810 22:10:31.653 - System_ModuleManager ReInitModulesAfter() Finished
+20120810 22:10:36.917 - System_ModuleManager ReInitModulesAfter() Started
+20120810 22:10:36.919 - System_ModuleManager ReInitModulesAfter() Finished
+20120811 14:01:11.553 - System_ModuleManager ReInitModulesAfter() Started
+20120811 14:01:11.555 - System_ModuleManager ReInitModulesAfter() Finished

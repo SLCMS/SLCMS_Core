@@ -1,0 +1,1 @@
+20130220 18:06:58.130 - Content Search CFC: init() Trapped. Site: Test Site, error message was: Unable to create collection slcms_test_site_site_2_bodycontent., error detail was: An error occurred while creating the collection: com.verity.api.administration.ConfigurationException: Index exists. Cannot insert entry. (-6065) Line: Content_Search.cfc:150) - ErrorCode: 0

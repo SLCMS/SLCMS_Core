@@ -1,0 +1,26 @@
+[Machines]
+;
+; ***** this is a real list - make sure its changed to anonymous stuff in the open source release version *****
+;
+Default=production
+;
+;Bigcheese2=design
+Bigcheese2=development
+;Bigcheese2=testing
+;Bigcheese2=maintenance
+;Bigcheese2=production
+Cheshire=design
+Edam=design
+;Edam=development
+;Edam=testing
+;Edam=maintenance
+;Edam=production
+Jupiter=production
+Neptune=production
+Stilton=design
+Uranus=production
+Wensleydale=design
+;Wensleydale=development
+;Wensleydale=testing
+;Wensleydale=maintenance
+;Wensleydale=production

@@ -1,0 +1,197 @@
+/*
+Name: Sliding Login Panel with jQuery 1.3.2
+Author: Jeremie Tisseau
+Author URI: http://web-kreation.com/
+Date: March 26, 2009
+Version: 1.0
+
+	Copyright 2009 Jeremie Tisseau
+	"Sliding Login Panel with jQuery 1.3.2" is distributed under the GNU General Public License version 3:
+	http://www.gnu.org/licenses/gpl-3.0.html
+*/
+@import "adminGlobal.css";
+/***** clearfix *****/
+.clear {clear: both;height: 0;line-height: 0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+.clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* Panel Tab/button */
+.tab {
+ 	background: url(AdminSepBar.gif) repeat-x 0 0;
+	height: 26px;
+	width: 100%;
+  color: #222211;
+/*	background-color: #E1F9FF;*/
+	background-color: #EEEEEE;
+	position: relative;
+  top: 0;
+  margin-left: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+.tab div.BaseControls {
+ 	background: url(AdminSepBar.gif) repeat-x 0 0;
+	display: block;
+	position: relative;
+	float: left;
+  height: 26px;
+	width: auto;
+  font-weight: normal;
+	line-height: 22px;
+	margin: 0;
+	left: 10px;
+ 	font-size: 80%;
+	text-align: center;
+}
+
+.tab ul.login {
+ 	background: url(AdminSepBar.gif) repeat-x 0 0;
+	display: block;
+	position: relative;
+	float: right;
+  clear: right;
+  height: 26px;
+	width: auto;
+  font-weight: bold;
+	line-height: 22px;
+	margin: 0;
+	right: 10px;
+ 	font-size: 80%;
+	text-align: center;
+}
+
+.tab ul.BaseControls li.left {
+ 	background: url(AdminSepBar.gif) no-repeat left 0;
+ 	height: 22px;
+	width: 30px;
+	padding: 0;
+	margin: 0;
+ 	display: block;
+	float: left;
+}
+
+.tab ul.login li.right {
+ 	background: url(AdminSepBar.gif) no-repeat left 0;
+ 	height: 22px;
+	width: 20px;
+	padding: 5px;
+	margin: 0;
+  display: block;
+	float: left;
+}
+
+.tab ul.login li {
+ 	text-align: left;
+  padding: 0px 0px 0px 10px;
+	display: block;
+	float: left;
+	height: 22px;
+}
+
+.tab ul.login li a {
+	color: #222211;
+}
+
+.tab ul.login li a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+.tab .sep {color:#blue}
+
+.tab a.open, .tab a.close {
+	height: 20px;
+	line-height: 20px !important;
+	padding-left: 30px !important;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	top: 0px;
+}
+
+.tab a.open {background: url(bt_open.png) no-repeat left 0px;}
+.tab a.close {background: url(bt_close.png) no-repeat left 0px;}
+.tab a:hover.open {background: url(bt_open.png) no-repeat left -19px;}
+.tab a:hover.close {background: url(bt_close.png) no-repeat left -19px;}
+
+#EditControls a.ECopen, #EditControls a.ECclose {
+	height: 20px;
+	line-height: 20px !important;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	top: 0px;
+	text-decoration: none;
+	color: #222211;
+}
+
+/* sliding panel */
+#AdminPanelWrapper {
+ /* position: absolute;*/   /*Panel will overlap  content */
+  position: relative;   /*Panel will "push" the content down */
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#AdminPanel {
+	width: 100%;
+	height: 600px;
+	color: #222211;
+	background: #E1F9FF;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	display: none;
+}
+
+#panel h1 {
+	font-size: 1.6em;
+	padding: 5px 0 10px;
+	margin: 0;
+	color: white;
+}
+
+#panel h2{
+	font-size: 1.2em;
+	padding: 10px 0 5px;
+	margin: 0;
+	color: white;
+}
+
+#panel p {
+	margin: 5px 0;
+	padding: 0;
+}
+
+#panel a {
+	text-decoration: none;
+	color: #15ADFF;
+}
+
+#panel a:hover {
+	color: white;
+}
+
+#panel .content {
+	width: 975px;
+	margin: 0 auto;
+	padding-top: 15px;
+	text-align: left;
+	font-size: 0.85em;
+}
+
+#PopAdminiFrame {
+	width:100%;
+	height: 600px;
+}

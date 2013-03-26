@@ -1,0 +1,213 @@
+<!--- 
+	this is the main application startup code for SLCMS
+	it is included into the SLCMS OnApplicationStart code that gets included into CFWheels OnApplicationStart code via the events code
+	it is also called from SLCMS's OnRequestStart code if the flushserial gets changed so we can update SLCMS code without having to do a full CFWheels reload
+ --->
+
+<!--- clear any previous startup messages --->
+<cfset application.SLCMS.Config.StartUp.OopsMsg = "" />
+<cfset application.SLCMS.Config.StartUp.WorkMsg = "" />
+
+<!--- now just load in the base utilities we use directly --->
+<cfset application.SLCMS.config.startup.UtilityCFCfolder = "#application.wheels.rootPath##application.SLCMS.config.base.SLCMSCoreRelPath#CFCs/mbc_Utilities/" />
+<cfset application.SLCMS.mbc_Utility = StructNew() />
+<cfset application.SLCMS.mbc_Utility.Utilities = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#Utilities") /><!--- this CFC has lots of general purpose uitility functions --->
+<cfset application.SLCMS.mbc_Utility.theThread = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#theThread")>
+<cfset application.SLCMS.mbc_Utility.iniTools = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#iniTools")>
+<cfset application.SLCMS.mbc_Utility.XMLtools = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#XMLtools")>
+<!--- and a few conditional ones --->
+<cfif application.SLCMS.config.Components.Use_Captcha eq "yes">
+	<cfset application.SLCMS.mbc_Utility.Captcha = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#Captcha")>
+</cfif>
+<cfif application.SLCMS.config.Components.Use_Formbuilder eq "yes">
+	<cfset application.SLCMS.mbc_Utility.FormBuilder = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#FormBuilderTools")>
+</cfif>
+<cfif application.SLCMS.config.Components.Use_RoundRobinDataStores eq "yes" >
+	<cfset application.SLCMS.mbc_Utility.RRDS = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#RoundRobinDataStorage")>
+</cfif>
+<cfif application.SLCMS.config.Components.Use_Search eq "yes" >
+	<cfset application.SLCMS.mbc_Utility.SearchFunctions = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#SearchFunctions")>
+</cfif>
+<cfif application.SLCMS.config.Components.Use_Stats eq "yes" >
+	<cfset application.SLCMS.mbc_Utility.Stats = createObject("component","#application.SLCMS.config.startup.UtilityCFCfolder#SimpleStats")>
+</cfif>
+
+<!--- so now we should have a standard application scope structure, lets add a few flags and things --->
+<cfset application.SLCMS.config.StartUp.WorkMsg = "" />
+<cfset application.SLCMS.config.CodingMode = this.variables.SLCMS.CodingMode />
+<cfset application.SLCMS.config.startup.initialization = StructNew() />
+<cfset application.SLCMS.config.startup.initialization.WeNeedToCreateDBTables = False />
+<cfset application.SLCMS.config.startup.initialization.ConfigFileLoadFailed = False />
+<cfset application.SLCMS.config.startup.initialization.SystemLoadErrorOopsMessage = "" />
+<cfset application.SLCMS.config.startup.initialization.SystemLoadErrorWorkMessage = "" />
+<!--- set up some proper logging --->
+<cfset Application.SLCMS.Logging = StructNew() />
+<!--- this will have the site name (if it exists in the config) added to it so the logging is more identifiable
+			the application scope might be here if this code has been called by a flush req from OnRequestStart --->
+<cfif StructKeyExists(application.SLCMS, "config") and StructKeyExists(application.SLCMS.config, "base") and StructKeyExists(application.SLCMS.config.base, "SiteAbbreviatedname") and len(application.SLCMS.config.base.SiteAbbreviatedname)>
+	<cfset this.variables.SLCMS.theSiteLogName = this.variables.SLCMS.theSiteName & "_" & application.SLCMS.config.base.SiteAbbreviatedname />
+  <cflog file="#this.variables.SLCMS.theSiteLogName#" type="Information" text="Application Start Code Called">
+<cfelse>
+	<cfset this.variables.SLCMS.theSiteLogName = this.variables.SLCMS.theSiteName />
+  <cflog file="#this.variables.SLCMS.theSiteLogName#" type="Information" text="Application Start Code Called but config not there">
+</cfif>
+<cfset Application.SLCMS.Logging.theSiteLogName = this.variables.SLCMS.theSiteLogName />
+<cfset Application.SLCMS.Logging.CommonLogName = this.variables.SLCMS.theSLCMSCommonLogName />
+<cflog text='Application Startup after SetSiteConfig() and logging structs set in __OnApplicationStart-inc - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss.L")#'  file="#Application.SLCMS.Logging.theSiteLogName#" type="Information" application="yes">
+
+<!--- if no errors when loading the config do whatever we need to set the rest up on an app scope refresh --->
+<!--- we do it in two steps as we need to check if we have just done an installation with no working DB yet, etc. --->
+<!--- we only check after a flush, otherwise we are just running like normal. first we do a check that the DB is there and has at least the version table in it --->
+
+<!--- we have loaded CFCs, set lots of flags and told our world the startup set site config code has been called --->
+
+<!--- load in the StartUp CFC, non persistently as we only need it during startup --->
+<cfset this.variables.SLCMS.StartUpFunctions = createObject("component","#application.SLCMS.config.base.MapURL##application.SLCMS.config.base.SLCMSCoreRelPath#CFCs/System_StartUpControl") /><!--- this CFC has functions to hides great code blocks and things --->
+<!--- then set the database names, top and tail strings, etc --->
+<cfset this.variables.SLCMS.StartUpFunctions.SetAppScopeDatabaseNames() />
+<!--- and test to make sure we have a viable database --->
+<cfset application.SLCMS.config.startup.initialization.DBIsThere = True />	<!--- flags that all is configured, assume good as we are normally just running --->
+<cfset application.SLCMS.config.startup.initialization.DBGood = True />
+<!--- We allegedly know where everything is so see if there is a database there. We need to do this before anything else as the utilities might need the DB --->
+<cfset this.variables.SLCMS.StartUpFunctions.TestDBGood() />	<!--- sets a bunch of flags in app scope --->
+
+<!--- if we don't want to run the Install Wizard from the above test lets load in the SLCMS application and get everything going --->	
+<cfif not (application.SLCMS.config.startup.initialization.WeNeedToCreateDBTables or this.variables.SLCMS.ForceInstallWizard)>	<!--- the read config returned -1 if it did an appscope flush and the flag says we have a DB so we have stuff to work with --->
+  <!--- log that it was a flush --->
+  <cfif StructKeyExists(application.SLCMS.config.base, "SiteAbbreviatedname") and len(application.SLCMS.config.base.SiteAbbreviatedname)>
+		<cfset this.variables.SLCMS.theSiteLogName = this.variables.SLCMS.theSiteName & "_" & application.SLCMS.config.base.SiteAbbreviatedname />
+	</cfif>
+	<cfset Application.SLCMS.Logging.theSiteLogName = this.variables.SLCMS.theSiteLogName />
+  <cflog text="Application Flushed - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss.L")#" type="Information" file="#Application.SLCMS.Logging.theSiteLogName#">
+	<!--- now misc variable calculations, oo the're aren't any! --->
+	<!--- now we know where everything is load up stuff and initialise --->
+	<!--- this first one is to set up our common utilites --->
+	<cfset this.variables.SLCMS.Initialization.retUtilitiesInit = application.SLCMS.mbc_Utility.Utilities.init(DefStructure="#application.SLCMS.config.Utilities#") />	<!--- take the config from the ini files, can be any relevant structure --->
+	<!--- now we have the optional ones --->
+	<!--- this first optional one is to set up the RoundRobinDataStore if we need it --->
+	<cfif application.SLCMS.config.Components.Use_RoundRobinDataStores eq "yes">
+		<!--- use this version for standard functionality using ini file to define mode --->
+		<!--- first see what sort of database we are going to use, local files or an SQL DB --->
+		<cfif application.SLCMS.config.Components.RoundRobinDataStores_DatabaseMode eq "local">
+			<cfset this.variables.SLCMS.Initialization.StorePath = "#application.SLCMS.config.StartUp.DataBaseRootPath#RRDStores/" />
+			<cfset this.variables.SLCMS.Initialization.DataSource = "" />
+			<cfset this.variables.SLCMS.Initialization.StoreMode = "File" />
+		<cfelseif application.SLCMS.config.Components.RoundRobinDataStores_DatabaseMode eq "Mixed">
+			<cfset this.variables.SLCMS.Initialization.StorePath = "#application.SLCMS.config.StartUp.DataBaseRootPath#RRDStores/" />
+			<cfset this.variables.SLCMS.Initialization.DataSource = application.SLCMS.config.DataSources["#application.SLCMS.config.Components.RoundRobinDataStores_DataSource#"] />
+			<cfset this.variables.SLCMS.Initialization.StoreMode = "Mixed" />
+		<cfelse>
+			<cfset this.variables.SLCMS.Initialization.StorePath = "" />
+			<cfset this.variables.SLCMS.Initialization.DataSource = application.SLCMS.config.DataSources["#application.SLCMS.config.Components.RoundRobinDataStores_DataSource#"] />
+			<cfset this.variables.SLCMS.Initialization.StoreMode = "SQL" />
+		</cfif>
+		<!--- then initialize for this mode --->
+		<cfset this.variables.SLCMS.Initialization.retRRDSinit = application.SLCMS.mbc_Utility.RRDS.init(DataStorePath="#this.variables.SLCMS.Initialization.Storepath#", DataSource="#this.variables.SLCMS.Initialization.DataSource#", DataStoreMode="#this.variables.SLCMS.Initialization.StoreMode#", NoFileRead="#application.SLCMS.config.Components.RoundRobinDataStores_Test_NoFileRead#", TestDefaults="#application.SLCMS.config.Components.RoundRobinDataStores_Test_UseDefaultData#") />	<!--- tell the RRD engine where the DBs live and load defaults --->
+	</cfif>
+	<!--- and then stats if we are using them --->
+	<cfif application.SLCMS.config.Components.Use_Stats eq "yes">
+		<!--- initialize stats and set up the CF scheduled task to keep the disk stores up to date --->
+		<!--- first see what sort of database we are going to use, local files or an SQL DB --->
+		<cfif application.SLCMS.config.Components.Stats_DatabaseMode eq "local">
+			<cfset this.variables.SLCMS.Initialization.StorePath = "#application.SLCMS.config.StartUp.DataBaseRootPath#Stats/" />
+			<cfset this.variables.SLCMS.Initialization.StoreMode = "File" />
+		<cfelseif application.SLCMS.config.Components.Stats_DatabaseMode eq "Mixed">
+			<cfset this.variables.SLCMS.Initialization.StorePath = application.SLCMS.config.DataSources["#application.SLCMS.config.Components.Stats_DataSource#"] />
+			<cfset this.variables.SLCMS.Initialization.StoreMode = "Mixed" />
+		<cfelse>
+			<cfset this.variables.SLCMS.Initialization.StorePath = application.SLCMS.config.DataSources["#application.SLCMS.config.Components.Stats_DataSource#"] />
+			<cfset this.variables.SLCMS.Initialization.StoreMode = "SQL" />
+		</cfif>
+		<cfset this.variables.SLCMS.Initialization.SaveMode = application.SLCMS.config.Components.Stats_SaveMode />
+		<cfset this.variables.SLCMS.Initialization.retStatsInit = application.SLCMS.mbc_Utility.Stats.init(DataStorePath="#this.variables.SLCMS.Initialization.Storepath#", DataStoreMode="#this.variables.SLCMS.Initialization.StoreMode#", SaveMode="#this.variables.SLCMS.Initialization.SaveMode#", DiskRefreshRate="#application.SLCMS.config.Components.Stats_DiskRefreshRate#", RefreshURL="#application.SLCMS.config.Components.Stats_RefreshURL#", SiteName="#this.variables.SLCMS.theSiteLogName#") />	<!--- tell the Stats engine where the DBs live and load them in --->
+	</cfif>
+	<!--- then other items for application flush --->
+	<cfif application.SLCMS.config.base.BasePort eq "80" or application.SLCMS.config.base.BasePort eq "">
+		<cfset application.SLCMS.config.base.BasePortForLinks = "" />
+	<cfelse>
+		<cfset application.SLCMS.config.base.BasePortForLinks = ":#application.SLCMS.config.base.BasePort#" />
+	</cfif>
+	<!--- now we have set up the standard mbc utilities we do SLCMS stuff --->
+	<!--- all the way thru this we are going to duplicate a bunch of structures depending on whether the site is a portal or not
+				we will just drop each portal's name in at the top so each set is structured the same as the root site, or standalone site
+				 --->
+	<!--- firstly make sure all our definitions and the like are OK --->
+	<cfif StructKeyExists(application.SLCMS.config.base, "SiteName") and len(trim(application.SLCMS.config.base.SiteName))>	<!--- this is not really needed, it is to allow for errors on startup so we still have a legal name --->
+		<cfset application.SLCMS.config.base.theSiteSearchCollectionName = "SLCMS_#application.SLCMS.config.base.SiteName#" />
+	<cfelse>
+		<cfset application.SLCMS.config.base.theSiteSearchCollectionName = "#this.variables.SLCMS.Initialization.theSiteAppName#" />
+	</cfif>
+	<!--- and set up some global structures of things to use. Some store data to save digging into CFCs just for a path or something simple --->
+	<cfset application.SLCMS.System = StructNew() />	<!--- this will carry the system management details --->
+	<cfset application.SLCMS.Core = StructNew() />	<!--- this will carry all of the core functions in CFCs --->
+	<cfset application.SLCMS.Modules = StructNew() />	<!--- this will carry all of the modules' structures and persistent functions in CFCs --->
+	<!--- then we create the core's module controller and initialize the core --->
+  <cflog text="initialize the core Started - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss.L")#" type="Information" file="#Application.SLCMS.Logging.theSiteLogName#">
+	<cfset application.SLCMS.Core.ModuleController = createObject("component","#application.SLCMS.config.base.MapURL##application.SLCMS.config.base.SLCMSCoreRelPath#ModuleController") /><!--- this CFC has the initialization for the core --->
+	<cfset this.variables.SLCMS.Initialization.CoreDefinitionInitReturn = application.SLCMS.Core.ModuleController.initModule(ApplicationConfig=application.SLCMS.config) />
+	
+	<cfif this.variables.SLCMS.CodingMode>
+		<cfif isObject(application.SLCMS.Core.ModuleController) and 1 eq 0>
+			Core Module CoreDefinition in OnAppStart:<br>
+			<cfdump var="#application.SLCMS.Core.ModuleController#" expand="false">
+		<cfelse>
+			<cfdump var="#application.SLCMS#" expand="false" label="application.SLCMS">
+			<cfabort>
+		</cfif>
+		application.SLCMS.config in OnAppStart:<br>
+		<cfdump var="#application.SLCMS.config#" expand="false">
+	</cfif>
+			
+	
+	<cfif this.variables.SLCMS.CodingMode>
+		Core Initialized:-<br>
+		UserControl Init dump in __OnAppStart-inc:<br>
+		<cfdump var="#this.variables.SLCMS.Initialization.CoreDefinitionInitReturn#" expand="false">
+		<br>
+	</cfif>
+	
+  <cflog text="initialize the Modules Started - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss.L")#" type="Information" file="#Application.SLCMS.Logging.theSiteLogName#">
+	<!--- all done and no errors so lets initialize all the modules --->
+	<cfset application.SLCMS.System.ModuleList_Available = "" />	<!--- this will carry a list of the usable modules in the system, we load in a dummy here in case the module loading fails --->
+	<cfset application.SLCMS.System.ModuleList_Bad = "" />	<!--- this will carry a list of the broken modules that did not load --->
+	<cfset application.SLCMS.System.ModuleList_InFolder = "" />	<!--- this will carry a list of the all modules found in the modules folder, some might be dead or wrong version or whatever and unusable --->
+	<cfset application.SLCMS.System.ModuleManager = createObject("component","#application.SLCMS.config.base.MapURL##application.SLCMS.config.base.SLCMSCoreRelPath#CFCs/System_ModuleManager") /><!--- this CFC has the initialization for the core --->
+	<cfset application.SLCMS.System.ModuleManagerInit = application.SLCMS.System.ModuleManager.init(ApplicationConfig=application.SLCMS.config) />
+	
+	<cfif this.variables.SLCMS.CodingMode>
+		Modules System Initialized:-<br>
+		application.SLCMS.System in __OnAppStart-inc:<br>
+		<cfdump var="#application.SLCMS.System#" expand="false" label="application.SLCMS.System">
+		application.Modules in __OnAppStart-inc:<br>
+		<cfdump var="#application.SLCMS.Modules#" expand="false" label="application.SLCMS.Modules">
+		<br>
+	</cfif>
+  <cflog text="initialize the Modules Finished - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss.L")#" type="Information" file="#Application.SLCMS.Logging.theSiteLogName#">
+<cfelse>
+	<!--- nothing happened, we probably need the install wizard --->
+  <cflog text="SLCMS Initialization code skipped. WeNeedToCreateDBTables said: #YesNoFormat(application.SLCMS.config.startup.initialization.WeNeedToCreateDBTables)#  - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss.L")#" type="Information" file="#Application.SLCMS.Logging.theSiteLogName#">
+</cfif>	<!--- end: code to run on application startup, 2nd step if we had a good DB --->
+<!--- then other items for application (re)start even if we did not do a flush (can that happen?) --->
+<cfset Application.SLCMS.sessions = StructNew() />
+<cfset Application.SLCMS.sessions.NumberActive = 0 />
+<!--- and remove junk --->
+<cfset StructDelete(variables, "StartUpFunctions") />	<!--- dump now we are done --->
+<cfset this.variables.SLCMS.Initialization.AppWasRestarted = True />
+
+<cfif this.variables.SLCMS.CodingMode>
+	OnApplicationStart: finished<br>
+	<cfif not application.SLCMS.config.startup.initialization.WeNeedToCreateDBTables>
+	<!---
+		application.SLCMS.Core.UserControl.getVariablesScope() at end of _OnAppStart-inc:<br>
+		<cfdump var="#application.SLCMS.Core.UserControl.getVariablesScope()#" expand="false">
+  --->
+	<cfelse>
+		WeNeedToCreateDBTables has been flagged True<br>
+	</cfif>
+</cfif>
+	
+<!--- tell wheels what datasource we are using --->
+<cfset set(dataSourceName="#application.SLCMS.config.datasources.cms#")>
+
+<cflog text='Application Startup finished in _OnApplicationStart-inc - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss.L")#'  file="#this.variables.SLCMS.theSiteLogName#" type="Information" application="yes">
+	

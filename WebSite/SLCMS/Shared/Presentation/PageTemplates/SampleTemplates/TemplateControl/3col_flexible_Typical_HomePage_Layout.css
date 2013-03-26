@@ -1,0 +1,103 @@
+/* 
+ * Layout Stylesheet for a 3 column, flexible layout page with header and fixed width LH and RH columns
+ * The styles that live here are the ones that control the layout of the page 
+ */
+
+
+body {
+	Margin : 2px 10px 10px 10px;
+}
+	 
+/* Page Header */
+#hdr {
+ height:80px;
+ padding:5px 0 0 0;
+ margin:10px 0px 0px 0px;
+}
+#hdr-Logo {
+  float:left;
+}
+#hdrRightHand {
+	float:right;
+	margin:-5px 10px;
+}
+#hdrContent {
+  margin:0px 220px 0px 0px;
+}
+.SrchSet {
+	padding: 5px 0 5px 10px;
+	border: 0px solid #000;
+	margin:0;
+}
+#TopSearchField {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+/*
+
+#SearchTerm {
+	float:left;
+}
+
+*/
+#SrchButton {
+	float:right;
+}
+
+/* left hand column related */
+#leftColumn_Wrapper {
+  float:left;
+  width: 200px;
+  margin: 0px 0px 10px 0px;
+}
+
+#leftColumn_Upper {
+  float:left;
+  width: 200px;
+}
+
+#leftColumn_Lower {
+  float:left;
+	margin-top:10px;
+  width: 200px;
+}
+
+/* Page Content Area */
+#container {
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+}
+
+#container #rightColumn {
+  float:right;
+  width:200px;
+  margin-right: 20px;
+}
+
+#container #middleColumn {
+  margin:0 240px;
+	padding:0 0 0 0;
+}
+
+.cleaner {
+	clear:both;
+	height:1px;
+	font-size:1px;
+	border:none;
+	margin:0; padding:0;
+	background: none;
+}
+
+/* and what's at the bottom */
+#footer {
+  clear:both;
+  float: left;
+  margin-top: 10px;
+  width: 100%;
+}
+#footerPowered {
+  float:right;
+}
+

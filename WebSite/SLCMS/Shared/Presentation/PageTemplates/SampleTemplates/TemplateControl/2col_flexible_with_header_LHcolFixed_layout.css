@@ -1,0 +1,63 @@
+/* 
+ * Layout Stylesheet for the 2 column, flexible layout page with header and fixed width LH column
+ * The styles that live here are the ones that control the layout of the page 
+ */
+
+body {
+	Margin : 2px 10px 10px 10px;
+}
+
+/* Page Header */
+#hdr {
+ height:80px;
+ padding:5px 0 0 0;
+ margin:10px 0px 0px 0px;
+}
+#hdr-Logo {
+  float:left;
+}
+#hdrRightHand {
+	float:right;
+	margin:6px 10px;
+}
+#hdrContent {
+  margin:0px 220px 0px 0px;
+}
+
+/* left hand column related */
+#lh-col{
+  /*position: absolute;*/
+  float:left;
+  top: 110px;
+  /*left: 10px;*/
+  width: 200px;
+  margin: 0px 0px 10px 10px;
+  padding: 0px 0px 0px 0px;
+/*  height: 400px;*/
+}
+
+/* then the right-hand side */
+#rh-col{
+  margin: 11px 10px 10px 220px;
+  position:relative;
+}
+
+/* and what's at the bottom */
+.cleaner {
+  clear:both;
+  height:1px;
+  font-size:1px;
+  border:none;
+  margin:0; padding:0;
+  background: none;
+}
+#footer {
+  clear:both;
+  float:left;
+  width:100%;
+}
+#footerPowered {
+  float:right;
+}
+
+ 

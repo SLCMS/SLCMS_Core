@@ -1,0 +1,4 @@
+Modules with a space in the folder name will be ignored.
+
+This means if you want to hide a module it is easy, just rename it so there is a space character in the folder name.
+
