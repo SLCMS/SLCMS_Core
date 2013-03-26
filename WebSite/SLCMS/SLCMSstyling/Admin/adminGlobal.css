@@ -1,0 +1,453 @@
+
+html {
+	font-size : 100.01%;
+	padding: 0px;
+	margin:0px
+}
+
+body {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 0.8em;
+	font-weight : normal;
+	color : #222211;
+	background-color: #E1F9FF;
+	Margin : 2px 10px 10px 10px;
+}
+
+table,td {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 1em;
+	font-weight : normal;
+	color : #222211;
+	background-color: #E1F9FF;
+	Margin : 0 0 0 0;
+	padding:3px;
+}
+
+.PickerBody1 {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : normal;
+	color : #222211;
+	background-color: #CCE4E9;
+}
+
+.PickerBody2 {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : normal;
+	color : #222211;
+	background-color: #BCD4D9;
+}
+
+.frontend  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	font-weight : normal;
+	color : #000000;
+	background-color: #FFFFFF;
+	Margin-left : 0;
+	Margin-top : 0;
+}
+
+h4  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	font-weight : bold;
+	color : #000000;
+}
+
+p {
+ padding-top:0.2em; 
+ padding-bottom:0.2em; 
+  margin:0px; 
+}
+
+.navbar  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #FFFFFF;
+	font-weight : bold;
+}
+
+.nav  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	margin-left : 6px;
+	text-align : left;
+	color : #FFFFFF;
+	text-decoration : none;
+}
+
+.smallcontentwhite  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 9px;
+	color : #FFFFFF;
+}
+
+.smallcontent  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 8pt;
+}
+
+.breadcrumbs  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+    color: #111166
+}
+
+.breadcrumbshighlight  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+    color: #000000
+}
+
+.newsentry  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 12px;
+}
+
+.newsname  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 13px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.leftcelllinks  {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #FFFFFF;
+	font-weight : bold;
+	text-decoration : none;
+}
+
+
+.leftcellhighlight {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FFCC00 ; 	text-decoration : none;}
+
+
+.majorheading  {
+	font-size : 1.3em;
+	font-weight : bold;
+	color: #0086BC; /* was #111166*/
+	padding: 0.8em 0 0.1em 0;
+}
+.majorheadingsmaller  {
+	font-size : 1.1em;
+	font-weight : bold;
+	color: #094C91;
+	padding: 0.8em 0 0.1em 0;
+}
+.HeadNavigation {
+	font-size : 1.0em;
+	color: #111166;
+	border-bottom:solid;
+	border-bottom-width:thin;
+	padding: 0em 0 0.5em 0;
+	margin: .5em 0 0.5em 0;
+}
+.HeadNavigationNoBorder {
+	font-size : 1.0em;
+	color: #111166;
+	padding: 0em 0 0.5em 0;
+	margin: .5em 0 0.5em 0;
+}
+.minorheadingText  {
+	font-size : 1.0em;
+	font-weight : bold;
+	color: #111111;
+/*	padding: .1em 0 .1em 0; */
+}
+.minorheadingName  {
+	font-size : 1.2em;
+	font-weight : bold;
+	color: #111166;
+	padding: .1em 0 .1em 0;
+}
+.minorheadingNameSmaller  {
+	font-size : 1.1em;
+	font-weight : bold;
+	color: #111166;
+	padding: .1em 0 .1em 0;
+}
+.HintText {
+	font-size : 0.8em;
+	font-weight : normal;
+}
+.MsgTopBorder {
+  border-top:solid;
+  border-top-width:thin;
+  padding:0.3em 0 0em 0;
+  }
+
+.SuperDashboardSmallHeading {
+	font-weight:bold;
+}
+.TopBackLink {padding:0px 0px 10px 0px;}
+.TopBackLinkxx {padding:5px 0px 10px 0px;}
+.topNewsHeadline {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0000CC; text-decoration: underline;}
+.topStandfirst {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; text-decoration: none;}
+.byline {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-style: italic; color: #0000CC; text-decoration: underline;}
+.newsDate {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-style: italic; color: #999999; text-decoration: none;}
+.topStoryHead {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #333333; text-decoration: underline;}
+.standfirst {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-decoration: none;}
+.storyHeadLink {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-decoration: underline; font-weight: bold;}
+.newsHeadline {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; text-decoration: underline; color: #0000CC; line-height: 14px;}
+.storyLink {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #0000CC; text-decoration: underline;}
+.blackLink { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; ; color: #000000;}
+.whitelinks { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px; color:#FFFFFF; font-weight:bold; text-decoration:none;}
+.bylineNoLink { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-style: italic; color: #000000}
+/*
+ this is old stuff
+h3 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: bold}
+ul {  list-style-image: url(/assets/bullet.gif); font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #000000}
+
+*/
+.ArticleBody { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:x-small; }
+.ticker { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #FFFFFF; text-decoration: none}
+.AdminloginFldSetLoggedIn { width:350px }
+.AdminloginFldSetLoggedOut { width:200px }
+.AdminloginInput { line-height:1.2em; margin:0 10px 10px 10px; padding:2px }
+.AdminHeadingSiteName { color:#111166; font-size:1.2em; font-style: italic; }
+
+.tableHeading { font-size:10pt; font-weight: bold;}
+.tableHeadingless { font-size:8pt; font-weight: bold;}
+.worktable { background-color: #DCF4F9; margin:0.5em 0em 0.5em 0em;}
+.WorkTableTopRow  { background-color: #DCF4F9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTableTopRowRHcol  { background-color: #DCF4F9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;border-right: 1px solid #BBBBBB;}
+.WorkTableTopRowRHCol  { background-color: #DCF4F9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;border-right: 1px solid #BBBBBB;}
+.WorkTableTopRowFull  { background-color: #DCF4F9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;border-right: 1px solid #BBBBBB;}
+.WorkTableTopRowColour2Full  { background-color: #CEE5E9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableTopRowColour2FullNB  { background-color: #CEE5E9; border-top: 1px solid #BBBBBB; border-bottom: 0px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTable2ndRow  { background-color: #DCF4F9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTable2ndRowRHcol  { background-color: #DCF4F9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTable2ndRowFull  { background-color: #DCF4F9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTable2ndRowColour2  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTable2ndRowColour2RHcol  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableMidRowColour2  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 0px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableMidRowColour2Full  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 0px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableRowColour1  { background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTableRowColour1UpDown  { width:65px; background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTableRowColour2 { background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTableRowColour3 { background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTableRowColour4 { background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.WorkTableRowColour1RHCol  { background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableRowColour2RHCol { background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableRowColour3RHCol { background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableRowColour4RHCol { background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableRowChangedColour {background-color: #BBFFE0; border-bottom: 1px solid Gray; border-left: 1px solid #BBBBBB;}
+.WorkTableRowColour1withRH  { background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableRowColour2withRH  { background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.WorkTableNavNameColourOn  { color: #000000; padding-left:4px}
+.WorkTableNavNameColourMid  { color: #808080; padding-left:4px}
+.WorkTableNavNameColourOff  { color: #c0c0c0; padding-left:4px}
+.WorkTableNavExpand  { padding-right:4px}
+
+#IMWrapper { width:770px; background-color: #DCF4F9; margin:5px;}
+.divTable { width:760px; background-color: #DCF4F9; margin:0px 5px 0px 5px;}
+.divTableTopRow  { width:752px; padding:6px 3px 6px 3px; margin-top:3px; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;border-right: 1px solid #BBBBBB;}
+.divTableTopRowLHCol  { width:300px; }
+.divTableTopRowRHCol  { width:150px; float:right; text-align:right;}
+.divTableTopRowNoBdr  { width:752px; padding:6px 3px 6px 3px; margin-top:3px;}
+.divTableTopRowNoBdrLHCol  { width:300px; }
+.divTableTopRowNoBdrRHCol  { width:150px; float:right; text-align:right;}
+.divTableTopRowFull  { background-color: #DCF4F9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;border-right: 1px solid #BBBBBB;}
+.divTableTopRowColour2Full  { background-color: #CEE5E9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableTopRowColour2FullNB  { background-color: #CEE5E9; border-top: 1px solid #BBBBBB; border-bottom: 0px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTable2ndRow  { width:760px; background-color: #DCF4F9; }
+.divTable2ndRowRHCol  { background-color: #DCF4F9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTable2ndRowFull  { background-color: #DCF4F9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTable2ndRowColour2  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.divTable2ndRowColour2RHCol  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableMidRowColour2  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 0px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableMidRowColour2Full  { background-color: #CEE5E9; border-top: 0px solid #BBBBBB; border-bottom: 0px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableRowColour1  { background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.divTableRowColour1LHCol  { width:300px; background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.divTableRowColour2 { background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.divTableRowColour3 { background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.divTableRowColour4 { background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB;}
+.divTableRowColour1RHCol  { background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableRowColour2RHCol { background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableRowColour3RHCol { background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableRowColour4RHCol { background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableRowColour1Cell  { background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour1LHColCell { width:300px; padding:3px; background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; }
+.divTableRowColour2LHColCell { width:300px; background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour3LHColCell { width:300px; background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour4LHColCell { width:300px; background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour1LMColCell { width:142px; padding:3px; background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; float:right;}
+.divTableRowColour2LMColCell { width:150px; background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour3LMColCell { width:150px; background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour4LMColCell { width:150px; background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour1RMColCell { width:142px; padding:3px; background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; float:right;}
+.divTableRowColour2RMColCell { width:142px; background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour3RMColCell { width:142px; background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour4RMColCell { width:142px; padding:3px; background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour1RHColCell { width:147px; padding:3px; background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB; float:right;}
+.divTableRowColour2RHColCell { width:152px; padding:3px; background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour3RHColCell { width:152px; padding:3px; background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB; display:inline;}
+.divTableRowColour4RHColCell { width:152px; padding:3px; background-color: #B3C7CB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB; display:inline;}
+.divTableRowChangedColour {background-color: #BBFFE0; border-bottom: 1px solid Gray; border-left: 1px solid #BBBBBB;}
+.divTableRowColour1withRH  { background-color: #DCF4F9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableRowColour2withRH  { background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.divTableNavNameColourOn  { color: #000000; padding-left:4px}
+.divTableNavNameColourMid  { color: #808080; padding-left:4px}
+.divTableNavNameColourOff  { color: #c0c0c0; padding-left:4px}
+.divTableNavExpand  { padding-right:4px}
+
+.SortTable { background-color: #DCF4F9; margin:0em 0em 0em 0em; padding:0px;}
+.SortTableTopRow  { background-color: #DCF4F9; }
+.SortTableTopRowColour2  { background-color: #CEE5E9; }
+.SortTable2ndRow  { background-color: #DCF4F9; }
+.SortTable2ndRowColour2  { background-color: #CEE5E9; }
+.SortTableMidRowColour2  { background-color: #CEE5E9; }
+.SortTableRowColour1  { background-color: #DCF4F9; }
+.SortTableRowColour1UpDown  { width:65px; background-color: #DCF4F9; }
+.SortTableRowColour2 { background-color: #CEE5E9; }
+.SortTableRowColour3 { background-color: #C0D6DA; }
+.SortTableRowColour4 { background-color: #B3C7CB; }
+.SortTableRowChangedColour {background-color: #BBFFE0; }
+.SortTableNavNameColourOn  { color: #000000; padding-left:4px}
+.SortTableNavNameColourMid  { color: #808080; padding-left:4px}
+.SortTableNavNameColourOff  { color: #c0c0c0; padding-left:4px}
+.SortTableNavExpand  { padding-right:4px}
+
+ul.SortableList {
+	list-style-type: none;
+	width:760px;
+	padding:0px;
+	margin:0px;
+}
+li.SortableListRow {
+	border: 0px solid #BBBBBB;
+	padding:3px;
+}
+.ColCell_300W {
+	display: inline-block;
+	width:299px;
+	padding:3px;
+	margin:0px;
+	border-right: 1px solid #BBBBBB;
+}
+.ColCell_152W {
+	display: inline-block;
+	width:145px;
+	height:100%;
+	padding:3px;
+	margin:0px;
+	border-right: 1px solid #BBBBBB;
+}
+.ColCell_142W {
+	display: inline-block;
+	width:144px;
+	padding:3px;
+	margin:0px;
+	border-right: 1px solid #BBBBBB;
+}
+.tDnD_whileDrag {
+	background-color: #BBFFE0; 
+}
+.ReorderUpDown {
+	text-align:center;
+	background: url(graphics/fam/arrow_switch.png) no-repeat center;
+	width:20px;
+}
+.RenameImage {
+	text-align:center;
+	background: url(graphics/fam/picture_edit.png) no-repeat left;
+	width:100px;
+}
+.EditImageDetails {
+	text-align:center;
+	background: url(graphics/fam/picture_empty.png) no-repeat left;
+	width:100px;
+}
+.ShowHideImage {
+	text-align:center;
+	background: url(graphics/fam/picture_go.png) no-repeat left;
+	width:100px;
+}
+.ButtonStylerLH {
+	font-size:0.8em;
+	float:left;
+}
+.ButtonStylerRH {
+	font-size:0.8em;
+}
+.TopBackLink {
+	display:none;
+}
+#TopGoBackLink {
+	font-size:0.8em;
+}
+.LowBackLink {
+	display:none;
+}
+.ChangedButtonStylerLH {
+	padding:2px 0px 0px 2px;
+/*
+	font-size:0.8em;
+*/
+	float:left;
+}
+.ChangedButtonStylerRH {
+	padding:2px 0px 0px 2px;
+	font-size:0.8em;
+	float:right;
+}
+.WarningBox_Light {
+	font-weight:bold;
+	background-color:#FFEFB9;
+	border:2px solid #FFA455;
+	padding:5px 5px 5px 5px;
+	width:750px;
+	clear:both;
+}
+.WarningBox_Dark {
+	font-weight:bold;
+	background-color:#FFD432;
+	border:2px solid #FF9D33;
+	padding:5px 5px 5px 5px;
+	width:750px;
+	clear:both;
+}
+.WarningBoxText {
+	padding:0px 3px 0px 3px;
+	line-height:2em;
+	color:#A3401F;
+}
+
+.ModuleSelectedPromptText {
+	font-weight:bolder;
+}
+.PopModuleSelectorLink {
+	
+}
+
+.ClearAll {clear:both;}
+.worklinks { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px; color:#222211;}
+.greylinks { font-family:Verdana, Arial, Helvetica, sans-serif; font-size:13px; color:#888888; text-decoration:none;}
+.DestSelDisplayBox_Hidden { visibility:hidden; }
+.DestSelDisplayBox_Shown { visibility:visible; }
+.erorColour { color: #CC2200; font-weight: bold;}
+.errrColour { color: #CC2200; font-weight: bold;}
+.warnColour { color: #886600; font-weight: bold;}
+.noteColour { color: #886600; font-weight: normal;}
+.goodColour { color: #118800; font-weight: bold;}
+.MsgSpace { padding:5px 0px 5px 0px;}
+
+#ExpanderLinksWrapper {padding:1em 0em 1em 0em; }
+.ExpandTableTopRow  { font-size:0.83em; background-color: #DCF4F9; border-top: 1px solid #BBBBBB; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.ExpandTableRowColour2 { font-size:0.83em; background-color: #CEE5E9; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+.ExpandTableRowColour3 { font-size:0.83em; background-color: #C0D6DA; border-bottom: 1px solid #BBBBBB; border-left: 1px solid #BBBBBB; border-right: 1px solid #BBBBBB;}
+
+#SubSiteLinksWrapper {padding:1em 1em 1em 1em; }
+#SubSiteLinksWrapper .LeftEnd  { background-color: #CEE5E9; padding:0.1em 0.5em 0.2em 1em;}
+#SubSiteLinksWrapper .OddNumbered  { background-color: #C0D6DA; border-left: 1px solid #BBBBBB; padding:0.1em 0.5em 0.2em 1em;}
+#SubSiteLinksWrapper .EvenNumbered { background-color: #CEE5E9; border-left: 1px solid #BBBBBB; padding:0.1em 0.5em 0.2em 1em;}
+
+#SubWarnMsg {
+  color: #886600; 
+/*  display:none; */
+}
+

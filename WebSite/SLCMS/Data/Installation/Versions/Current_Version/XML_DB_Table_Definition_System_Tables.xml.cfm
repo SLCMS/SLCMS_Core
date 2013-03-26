@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+	<table name="nexts">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="no" cf_datatype="cf_sql_bit" columnname="flag_currentdata" default="1" precision="1" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_date" columnname="nexttimestamp" precision="23" scale="3"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="idname" length="255" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_char" columnname="idFormat" length="2" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="nextidvalue" length="64" precision="12" scale="2"/>
+	</table>
+  <indexes table="nexts">
+    <index indexname="IDname" fields="idname" />
+    <index indexname="IDnameCurrent" fields="idname,flag_currentdata" />
+  </indexes>
+	<table name="rrdb_mastercontrol">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="counternamelist" length="255" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="countercount" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="refreshrate" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="storefullname" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="addmethod" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="datastoremode" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="storestatus" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="storeoktouse" length="50" precision="12" scale="2"/>
+	</table>
+	<table name="stats_packetstore">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="packetname" length="128" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_longvarchar" columnname="packetstore" precision="12" scale="2"/>
+	</table>
+	<table name="slcms_system_admin_userdetails">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="staffId" default="0" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="staff_SignIn" length="64" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="staff_Password" length="64" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="staff_FirstName" length="64" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="staff_LastName" length="64" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="staff_eddress" length="255" precision="12" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="global_rolevalue" default="0" precision="10" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_char" columnname="global_rolebits" default="00000000000000000000000000000000" length="32" precision="12" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_bit" columnname="user_active" default="0" precision="1" scale="2"/>
+	</table>
+	<table name="slcms_system_admin_userroles">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="userid" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="siteid" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="moduleid" precision="10" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_char" columnname="rolebits" default="00000000000000000000000000000000" length="32" precision="12" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="rolevalue" default="0" precision="10" scale="2"/>
+	</table>
+	<table name="slcms_system_flags">
+		<field allownulls="no" cf_datatype="cf_sql_varchar" columnname="flagname" length="50" precision="12" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_char" columnname="flagtype" length="4" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="state" length="50" precision="12" scale="2"/>
+	</table>
+	<data table="slcms_system_flags" permanentRows="true">
+  	<row flagname="PagesHaveTemplatesOnly" flagtype="bool" state="Yes" />
+  	<row flagname="SystemHasBeenConfigured" flagtype="bool" state="No" />
+  	<row flagname="SystemIsConfigured" flagtype="bool" state="No" />
+	</data>
+	<table name="slcms_system_modulemanagement_base">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="moduleid" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_varchar" columnname="moduleformalname" length="50" precision="12" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_bit" columnname="enabled_global" default="0" precision="1" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="enabled_subsitelist" length="50" precision="12" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_bit" columnname="removed" default="0" precision="1" scale="2"/>
+	</table>
+	<table name="slcms_system_portalcontrol">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="subsiteid" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="subsitenavname" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="subsitefriendlyname" length="128" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="baseurl" length="255" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="flagallowsubsite" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="subsiteshortname" length="50" precision="12" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_bit" columnname="subsiteactive" default="1" precision="1" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="do" default="0" precision="10" scale="2"/>
+	</table>
+	<data table="slcms_system_portalcontrol">
+  	<row subsiteid="0" subsitenavname="Top" subsitefriendlyname="Top" flagallowsubsite="0" subsiteshortname="Root" subsiteActive="1" do="1" />
+	</data>
+	<table name="slcms_system_portalparentdocs">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="subsiteid" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="parentdocid" precision="10" scale="2"/>
+	</table>
+	<table name="slcms_system_portalurls">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="subsiteurlid" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="subsiteid" precision="10" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_varchar" columnname="subsiteurl" length="255" precision="12" primarykey="true" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="do" default="0" precision="10" scale="2"/>
+	</table>
+	<table name="slcms_system_versioncontrol">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="flag_activeversion" default="0" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="versionnumber_full" default="'0'" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="versionnumber_major" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="versionnumber_minor" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="versionnumber_dot" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="versionnumber_revision" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_date" columnname="versiondate" precision="23" scale="3"/>
+		<field allownulls="yes" cf_datatype="cf_sql_date" columnname="installdate" precision="23" scale="3"/>
+		<field allownulls="yes" cf_datatype="cf_sql_date" columnname="throughdate" precision="23" scale="3"/>
+	</table>
+	<table name="slcms_type_document">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="doctype" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="docdesc" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="do" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="hidden" precision="10" scale="2"/>
+	</table>
+	<data table="slcms_type_document" permanentRows="true">
+  	<row doctype="0" docdesc="Ignore CMS" do="3" hidden="1" />
+  	<row doctype="1" docdesc="Direct File" do="2" hidden="0" />
+  	<row doctype="2" docdesc="Template" do="1" hidden="0" />
+  	<row doctype="3" docdesc="Custom Tag" do="4" hidden="1" />
+  	<row doctype="4" docdesc="Speck Page" do="6" hidden="1" />
+  	<row doctype="5" docdesc="Include File" do="5" hidden="1" />
+	</data>
+	<table name="slcms_type_template">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="templatetype" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="templatedesc" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="do" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="hidden" precision="10" scale="2"/>
+	</table>
+	<data table="slcms_type_template" permanentRows="true">
+  	<row templatetype="Standard" templatedesc="Standard Content" do="1" hidden="0" />
+  	<row templatetype="searchresult" templatedesc="Search Result" do="2" hidden="0" />
+  	<row templatetype="Blog" templatedesc="Blog" do="3" hidden="0" />
+  	<row templatetype="Form" templatedesc="Form" do="4" hidden="0" />
+  	<row templatetype="Wiki" templatedesc="Wiki" do="5" hidden="0" />
+  	<row templatetype="SiteMap" templatedesc="Site Map" do="6" hidden="0" />
+	</data>
+	<table name="slcms_type_user_staffroles">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="staff_roleid" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="staff_rolename" length="50" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="staff_roledescription" length="128" precision="12" scale="2"/>
+		<field allownulls="no" cf_datatype="cf_sql_char" columnname="staff_rolebits" default="00000000000000000000000000000000" length="32" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="do" precision="10" scale="2"/>
+	</table>
+	<data table="slcms_type_user_staffroles" permanentRows="true">
+  	<row staff_roleid="1" staff_rolename="SuperUser" staff_roledescription="SuperUser" user_rolebits="11111111111111111111111111111111" do="0" />
+  	<row staff_roleid="2" staff_rolename="Admin_Global" staff_roledescription="Global Administrator - has administrative privilege across whole subsite" staff_rolebits="00000000000000000000000000000100" do="2" />
+  	<row staff_roleid="3" staff_rolename="Editor_Global" staff_roledescription="Global Editor - has editorial privilege across whole subsite" staff_rolebits="00000000000000000000000000000010" do="3" />
+  	<row staff_roleid="4" staff_rolename="Author_Global" staff_roledescription="Global Author - has content creation privilege across whole subsite" staff_rolebits="00000000000000000000000000000001" do="4" />
+  	<row staff_roleid="5" staff_rolename="Author_Content" staff_roledescription="Content Author - has Author privilege across content only" staff_rolebits="00000000000000000000000000001000" do="5" />
+  	<row staff_roleid="6" staff_rolename="Editor_Content" staff_roledescription="Content Editor - has Editor privilege across content only" staff_rolebits="00000000000000000000000000010000" do="6" />
+  	<row staff_roleid="7" staff_rolename="Admin_Content" staff_roledescription="Content Admin - has administrative privilege across content only" staff_rolebits="00000000000000000000000000100000" do="7" />
+	</data>
+	<table name="thethread_links">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="threadsetid" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="threadid" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="externalvalue" precision="10" scale="2"/>
+	</table>
+	<table name="thethread_matrix">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="EntryID" Increment="true" primarykey="true"/>
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="threadid_left" default="0" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="threadid_right" default="0" precision="10" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_integer" columnname="threadsetid" precision="10" scale="2"/>
+	</table>
+	<table name="thethread_sets">
+		<field allownulls="no" cf_datatype="cf_sql_integer" columnname="threadsetid" precision="10" primarykey="true" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="tablename" length="128" precision="12" scale="2"/>
+		<field allownulls="yes" cf_datatype="cf_sql_varchar" columnname="fieldname" length="128" precision="12" scale="2"/>
+	</table>
+</tables>

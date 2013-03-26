@@ -1,0 +1,1 @@
+20121125 11:55:18.727 - ContentCFMfunctions CFC: getDocFromURL() Trapped. Site: Test Site, error message was: Element SLCMS.CORE.PORTALCONTROL is undefined in a Java object of type class [Ljava.lang.String; referenced as '', error detail was:  Line: ContentCFMfunctions.cfc:99) - ErrorCode: 0

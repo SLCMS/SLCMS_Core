@@ -1,0 +1,1 @@
+<cfsilent><!--- inserts the title of the page ---></cfsilent><cfif thisTag.executionMode IS "start"><cfset thisTag.OurContent = request.SLCMS.PageParams.PageTitle /></cfif><cfif thisTag.executionMode IS "end"><cfset thisTag.GeneratedContent = "" /><cfoutput>#thisTag.OurContent#</cfoutput></cfif>

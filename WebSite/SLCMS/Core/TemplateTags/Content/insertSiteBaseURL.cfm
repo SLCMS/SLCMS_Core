@@ -1,0 +1,1 @@
+<cfsilent><!--- inserts the base url to the website ---></cfsilent><cfif thisTag.executionMode IS "start"><cfset thisTag.OurContent = application.SLCMS.Config.Base.rootURL /></cfif><cfif thisTag.executionMode IS "end"><cfset thisTag.GeneratedContent = "" /><cfoutput>#thisTag.OurContent#</cfoutput></cfif>

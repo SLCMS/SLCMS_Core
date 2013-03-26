@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+	<data table="slcms_system_flags" permanentRows="true">
+  	<row flagname="PagesHaveTemplatesOnly" flagtype="bool" state="Yes" />
+  	<row flagname="SystemHasBeenConfigured" flagtype="bool" state="No" />
+  	<row flagname="SystemIsConfigured" flagtype="bool" state="No" />
+	</data>
+	<data table="slcms_type_user_staffroles" permanentRows="true">
+  	<row user_roleid="1" user_rolename="SuperUser" user_roledescription="SuperUser" user_rolebits="11111111111111111111111111111111" do="0" />
+  	<row user_roleid="2" user_rolename="Admin_Global" user_roledescription="Global Administrator - has administrative privilege across whole subsite" user_rolebits="00000000000000000000000000000100" do="2" />
+  	<row user_roleid="3" user_rolename="Editor_Global" user_roledescription="Global Editor - has editorial privilege across whole subsite" user_rolebits="00000000000000000000000000000010" do="3" />
+  	<row user_roleid="4" user_rolename="Author_Global" user_roledescription="Global Author - has content creation privilege across whole subsite" user_rolebits="00000000000000000000000000000001" do="4" />
+  	<row user_roleid="5" user_rolename="Author_Content" user_roledescription="Content Author - has Author privilege across content only" user_rolebits="00000000000000000000000000001000" do="5" />
+  	<row user_roleid="6" user_rolename="Editor_Content" user_roledescription="Content Editor - has Editor privilege across content only" user_rolebits="00000000000000000000000000010000" do="6" />
+  	<row user_roleid="7" user_rolename="Admin_Content" user_roledescription="Content Admin - has administrative privilege across content only" user_rolebits="00000000000000000000000000100000" do="7" />
+	</data>
+	<data table="slcms_type_template" permanentRows="true">
+  	<row templatetype="Standard" templatedesc="Standard Content" do="1" hidden="0" />
+  	<row templatetype="searchresult" templatedesc="Search Result" do="2" hidden="0" />
+  	<row templatetype="Blog" templatedesc="Blog" do="3" hidden="0" />
+  	<row templatetype="Form" templatedesc="Form" do="4" hidden="0" />
+  	<row templatetype="Wiki" templatedesc="Wiki" do="5" hidden="0" />
+  	<row templatetype="SiteMap" templatedesc="Site Map" do="6" hidden="0" />
+	</data>
+	<data table="slcms_type_document" permanentRows="true">
+  	<row doctype="0" docdesc="Ignore CMS" do="3" hidden="1" />
+  	<row doctype="1" docdesc="Direct File" do="2" hidden="0" />
+  	<row doctype="2" docdesc="Template" do="1" hidden="0" />
+  	<row doctype="3" docdesc="Custom Tag" do="4" hidden="1" />
+  	<row doctype="4" docdesc="Speck Page" do="6" hidden="1" />
+  	<row doctype="5" docdesc="Include File" do="5" hidden="1" />
+	</data>
+</tables>

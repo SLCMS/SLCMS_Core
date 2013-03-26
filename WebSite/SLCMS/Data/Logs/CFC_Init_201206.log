@@ -1,0 +1,832 @@
+20120601 20:16:23.248 - SLCMS_Utility Init() after variables.LogFolder set
+20120601 20:16:23.283 - SLCMS_Utility Init() Finished
+20120601 20:16:23.396 - Version Control-Master Init() Started
+20120601 20:16:23.437 - Version Control-Master Init() Finished
+20120601 20:16:26.874 - PortalControl Init() Started
+20120601 20:16:26.984 - PortalControl Init() Finished
+20120601 20:16:26.989 - PageStructure Init() Started
+20120601 20:16:27.190 - PageStructure Init() Finished
+20120601 20:16:27.193 - Content-Database I/O Init() Started
+20120601 20:16:27.196 - Content-Database I/O ReInitAfter() Started
+20120601 20:16:27.239 - Content-Database I/O ReInitAfter() Finished
+20120601 20:16:27.241 - Content-Database I/O Init() Finished
+20120601 20:16:27.244 - TemplateManagement Init() Started
+20120601 20:16:27.246 - TemplateManagement ReInit() Started
+20120601 20:16:27.889 - TemplateManagement ReInit() Finished
+20120601 20:16:27.891 - TemplateManagement Init() Finished
+20120601 20:16:27.893 - UserControl Init() Started
+20120601 20:16:27.946 - UserControl Init() Finished
+20120601 20:16:27.949 - UserPermission Init() Started
+20120601 20:16:27.975 - UserPermission Init() Finished
+20120601 20:16:27.978 - FormHandler Started
+20120601 20:16:27.982 - FormHandler Finished
+20120601 20:16:27.986 - ContentSearch I/O Started
+20120601 20:16:28.679 - ContentSearch I/O Finished
+20120601 20:16:29.357 - System_ModuleManager Init() Started
+20120601 20:16:29.366 - System_ModuleManager Init() Finished
+20120611 19:42:58.613 - SLCMS_Utility Init() after variables.LogFolder set
+20120611 19:42:58.682 - SLCMS_Utility Init() Finished
+20120611 19:42:58.786 - Version Control-Master Init() Started
+20120611 19:42:58.791 - Version Control-Master Init() Finished
+20120611 19:43:03.357 - PortalControl Init() Started
+20120611 19:43:03.525 - PortalControl Init() Finished
+20120611 19:43:03.528 - PageStructure Init() Started
+20120611 19:43:03.637 - PageStructure Init() Finished
+20120611 19:43:03.639 - Content-Database I/O Init() Started
+20120611 19:43:03.640 - Content-Database I/O ReInitAfter() Started
+20120611 19:43:03.686 - Content-Database I/O ReInitAfter() Finished
+20120611 19:43:03.688 - Content-Database I/O Init() Finished
+20120611 19:43:03.689 - TemplateManagement Init() Started
+20120611 19:43:03.691 - TemplateManagement ReInit() Started
+20120611 19:43:04.274 - TemplateManagement ReInit() Finished
+20120611 19:43:04.276 - TemplateManagement Init() Finished
+20120611 19:43:04.277 - UserControl Init() Started
+20120611 19:43:04.421 - UserControl Init() Finished
+20120611 19:43:04.423 - UserPermission Init() Started
+20120611 19:43:04.425 - UserPermission Init() Finished
+20120611 19:43:04.426 - FormHandler Started
+20120611 19:43:04.428 - FormHandler Finished
+20120611 19:43:04.430 - ContentSearch I/O Started
+20120611 19:43:05.463 - ContentSearch I/O Finished
+20120611 19:43:06.259 - System_ModuleManager Init() Started
+20120611 19:43:06.266 - System_ModuleManager Init() Finished
+20120611 20:05:26.34 - SLCMS_Utility Init() after variables.LogFolder set
+20120611 20:05:26.46 - SLCMS_Utility Init() Finished
+20120611 20:05:26.52 - Version Control-Master Init() Started
+20120611 20:05:26.57 - Version Control-Master Init() Finished
+20120611 20:05:26.769 - PortalControl Init() Started
+20120611 20:05:26.816 - PortalControl Init() Finished
+20120611 20:05:26.818 - PageStructure Init() Started
+20120611 20:05:26.901 - PageStructure Init() Finished
+20120611 20:05:26.902 - Content-Database I/O Init() Started
+20120611 20:05:26.903 - Content-Database I/O ReInitAfter() Started
+20120611 20:05:26.920 - Content-Database I/O ReInitAfter() Finished
+20120611 20:05:26.921 - Content-Database I/O Init() Finished
+20120611 20:05:26.922 - TemplateManagement Init() Started
+20120611 20:05:26.924 - TemplateManagement ReInit() Started
+20120611 20:05:27.257 - TemplateManagement ReInit() Finished
+20120611 20:05:27.258 - TemplateManagement Init() Finished
+20120611 20:05:27.259 - UserControl Init() Started
+20120611 20:05:27.294 - UserControl Init() Finished
+20120611 20:05:27.295 - UserPermission Init() Started
+20120611 20:05:27.297 - UserPermission Init() Finished
+20120611 20:05:27.298 - FormHandler Started
+20120611 20:05:27.299 - FormHandler Finished
+20120611 20:05:27.300 - ContentSearch I/O Started
+20120611 20:05:27.585 - ContentSearch I/O Finished
+20120611 20:05:27.989 - System_ModuleManager Init() Started
+20120611 20:05:27.994 - System_ModuleManager Init() Finished
+20120611 20:06:15.996 - SLCMS_Utility Init() after variables.LogFolder set
+20120611 20:06:16.6 - SLCMS_Utility Init() Finished
+20120611 20:06:16.10 - Version Control-Master Init() Started
+20120611 20:06:16.14 - Version Control-Master Init() Finished
+20120611 20:06:16.757 - PortalControl Init() Started
+20120611 20:06:16.803 - PortalControl Init() Finished
+20120611 20:06:16.804 - PageStructure Init() Started
+20120611 20:06:16.926 - PageStructure Init() Finished
+20120611 20:06:16.927 - Content-Database I/O Init() Started
+20120611 20:06:16.929 - Content-Database I/O ReInitAfter() Started
+20120611 20:06:16.947 - Content-Database I/O ReInitAfter() Finished
+20120611 20:06:16.948 - Content-Database I/O Init() Finished
+20120611 20:06:16.949 - TemplateManagement Init() Started
+20120611 20:06:16.951 - TemplateManagement ReInit() Started
+20120611 20:06:17.316 - TemplateManagement ReInit() Finished
+20120611 20:06:17.318 - TemplateManagement Init() Finished
+20120611 20:06:17.319 - UserControl Init() Started
+20120611 20:06:17.354 - UserControl Init() Finished
+20120611 20:06:17.356 - UserPermission Init() Started
+20120611 20:06:17.357 - UserPermission Init() Finished
+20120611 20:06:17.358 - FormHandler Started
+20120611 20:06:17.359 - FormHandler Finished
+20120611 20:06:17.360 - ContentSearch I/O Started
+20120611 20:06:17.634 - ContentSearch I/O Finished
+20120611 20:06:17.960 - System_ModuleManager Init() Started
+20120611 20:06:17.964 - System_ModuleManager Init() Finished
+20120611 21:34:40.984 - SLCMS_Utility Init() after variables.LogFolder set
+20120611 21:34:40.995 - SLCMS_Utility Init() Finished
+20120611 21:34:41.2 - Version Control-Master Init() Started
+20120611 21:34:41.6 - Version Control-Master Init() Finished
+20120611 21:34:41.631 - PortalControl Init() Started
+20120611 21:34:41.677 - PortalControl Init() Finished
+20120611 21:34:41.679 - PageStructure Init() Started
+20120611 21:34:41.767 - PageStructure Init() Finished
+20120611 21:34:41.768 - Content-Database I/O Init() Started
+20120611 21:34:41.769 - Content-Database I/O ReInitAfter() Started
+20120611 21:34:41.835 - Content-Database I/O ReInitAfter() Finished
+20120611 21:34:41.836 - Content-Database I/O Init() Finished
+20120611 21:34:41.837 - TemplateManagement Init() Started
+20120611 21:34:41.838 - TemplateManagement ReInit() Started
+20120611 21:34:42.218 - TemplateManagement ReInit() Finished
+20120611 21:34:42.219 - TemplateManagement Init() Finished
+20120611 21:34:42.220 - UserControl Init() Started
+20120611 21:34:42.251 - UserControl Init() Finished
+20120611 21:34:42.253 - UserPermission Init() Started
+20120611 21:34:42.254 - UserPermission Init() Finished
+20120611 21:34:42.255 - FormHandler Started
+20120611 21:34:42.256 - FormHandler Finished
+20120611 21:34:42.257 - ContentSearch I/O Started
+20120611 21:34:42.561 - ContentSearch I/O Finished
+20120611 21:34:42.876 - System_ModuleManager Init() Started
+20120611 21:34:42.881 - System_ModuleManager Init() Finished
+20120611 21:39:48.98 - SLCMS_Utility Init() after variables.LogFolder set
+20120611 21:39:48.110 - SLCMS_Utility Init() Finished
+20120611 21:39:48.114 - Version Control-Master Init() Started
+20120611 21:39:48.118 - Version Control-Master Init() Finished
+20120611 21:39:48.764 - PortalControl Init() Started
+20120611 21:39:48.806 - PortalControl Init() Finished
+20120611 21:39:48.807 - PageStructure Init() Started
+20120611 21:39:48.883 - PageStructure Init() Finished
+20120611 21:39:48.884 - Content-Database I/O Init() Started
+20120611 21:39:48.885 - Content-Database I/O ReInitAfter() Started
+20120611 21:39:48.905 - Content-Database I/O ReInitAfter() Finished
+20120611 21:39:48.906 - Content-Database I/O Init() Finished
+20120611 21:39:48.908 - TemplateManagement Init() Started
+20120611 21:39:48.909 - TemplateManagement ReInit() Started
+20120611 21:39:49.264 - TemplateManagement ReInit() Finished
+20120611 21:39:49.265 - TemplateManagement Init() Finished
+20120611 21:39:49.266 - UserControl Init() Started
+20120611 21:39:49.296 - UserControl Init() Finished
+20120611 21:39:49.297 - UserPermission Init() Started
+20120611 21:39:49.299 - UserPermission Init() Finished
+20120611 21:39:49.300 - FormHandler Started
+20120611 21:39:49.301 - FormHandler Finished
+20120611 21:39:49.302 - ContentSearch I/O Started
+20120611 21:39:49.587 - ContentSearch I/O Finished
+20120611 21:39:49.964 - System_ModuleManager Init() Started
+20120611 21:39:49.969 - System_ModuleManager Init() Finished
+20120614 20:15:22.422 - SLCMS_Utility Init() after variables.LogFolder set
+20120614 20:15:22.477 - SLCMS_Utility Init() Finished
+20120614 20:15:22.527 - Version Control-Master Init() Started
+20120614 20:15:22.533 - Version Control-Master Init() Finished
+20120614 20:15:23.205 - PortalControl Init() Started
+20120614 20:15:23.293 - PortalControl Init() Finished
+20120614 20:15:23.295 - PageStructure Init() Started
+20120614 20:15:23.409 - PageStructure Init() Finished
+20120614 20:15:23.410 - Content-Database I/O Init() Started
+20120614 20:15:23.411 - Content-Database I/O ReInitAfter() Started
+20120614 20:15:23.472 - Content-Database I/O ReInitAfter() Finished
+20120614 20:15:23.473 - Content-Database I/O Init() Finished
+20120614 20:15:23.474 - TemplateManagement Init() Started
+20120614 20:15:23.475 - TemplateManagement ReInit() Started
+20120614 20:15:23.937 - TemplateManagement ReInit() Finished
+20120614 20:15:23.938 - TemplateManagement Init() Finished
+20120614 20:15:23.940 - UserControl Init() Started
+20120614 20:15:23.996 - UserControl Init() Finished
+20120614 20:15:23.998 - UserPermission Init() Started
+20120614 20:15:23.999 - UserPermission Init() Finished
+20120614 20:15:24.1 - FormHandler Started
+20120614 20:15:24.2 - FormHandler Finished
+20120614 20:15:24.3 - ContentSearch I/O Started
+20120614 20:15:24.572 - ContentSearch I/O Finished
+20120614 20:15:24.904 - System_ModuleManager Init() Started
+20120614 20:15:24.908 - System_ModuleManager Init() Finished
+20120614 20:32:47.67 - SLCMS_Utility Init() after variables.LogFolder set
+20120614 20:32:47.81 - SLCMS_Utility Init() Finished
+20120614 20:32:47.88 - Version Control-Master Init() Started
+20120614 20:32:47.92 - Version Control-Master Init() Finished
+20120614 20:32:47.733 - PortalControl Init() Started
+20120614 20:32:47.775 - PortalControl Init() Finished
+20120614 20:32:47.776 - PageStructure Init() Started
+20120614 20:32:47.857 - PageStructure Init() Finished
+20120614 20:32:47.858 - Content-Database I/O Init() Started
+20120614 20:32:47.860 - Content-Database I/O ReInitAfter() Started
+20120614 20:32:47.876 - Content-Database I/O ReInitAfter() Finished
+20120614 20:32:47.877 - Content-Database I/O Init() Finished
+20120614 20:32:47.878 - TemplateManagement Init() Started
+20120614 20:32:47.880 - TemplateManagement ReInit() Started
+20120614 20:32:48.214 - TemplateManagement ReInit() Finished
+20120614 20:32:48.215 - TemplateManagement Init() Finished
+20120614 20:32:48.217 - UserControl Init() Started
+20120614 20:32:48.247 - UserControl Init() Finished
+20120614 20:32:48.248 - UserPermission Init() Started
+20120614 20:32:48.250 - UserPermission Init() Finished
+20120614 20:32:48.251 - FormHandler Started
+20120614 20:32:48.252 - FormHandler Finished
+20120614 20:32:48.253 - ContentSearch I/O Started
+20120614 20:32:48.534 - ContentSearch I/O Finished
+20120614 20:32:48.850 - System_ModuleManager Init() Started
+20120614 20:32:48.855 - System_ModuleManager Init() Finished
+20120614 20:43:12.391 - SLCMS_Utility Init() after variables.LogFolder set
+20120614 20:43:12.402 - SLCMS_Utility Init() Finished
+20120614 20:43:12.406 - Version Control-Master Init() Started
+20120614 20:43:12.410 - Version Control-Master Init() Finished
+20120614 20:43:13.34 - PortalControl Init() Started
+20120614 20:43:13.76 - PortalControl Init() Finished
+20120614 20:43:13.78 - PageStructure Init() Started
+20120614 20:43:13.161 - PageStructure Init() Finished
+20120614 20:43:13.162 - Content-Database I/O Init() Started
+20120614 20:43:13.163 - Content-Database I/O ReInitAfter() Started
+20120614 20:43:13.180 - Content-Database I/O ReInitAfter() Finished
+20120614 20:43:13.181 - Content-Database I/O Init() Finished
+20120614 20:43:13.182 - TemplateManagement Init() Started
+20120614 20:43:13.183 - TemplateManagement ReInit() Started
+20120614 20:43:13.503 - TemplateManagement ReInit() Finished
+20120614 20:43:13.505 - TemplateManagement Init() Finished
+20120614 20:43:13.506 - UserControl Init() Started
+20120614 20:43:13.537 - UserControl Init() Finished
+20120614 20:43:13.538 - UserPermission Init() Started
+20120614 20:43:13.539 - UserPermission Init() Finished
+20120614 20:43:13.540 - FormHandler Started
+20120614 20:43:13.542 - FormHandler Finished
+20120614 20:43:13.544 - ContentSearch I/O Started
+20120614 20:43:13.825 - ContentSearch I/O Finished
+20120614 20:43:14.135 - System_ModuleManager Init() Started
+20120614 20:43:14.139 - System_ModuleManager Init() Finished
+20120614 22:56:28.365 - SLCMS_Utility Init() after variables.LogFolder set
+20120614 22:56:28.377 - SLCMS_Utility Init() Finished
+20120614 22:56:28.384 - Version Control-Master Init() Started
+20120614 22:56:28.388 - Version Control-Master Init() Finished
+20120614 22:56:29.44 - PortalControl Init() Started
+20120614 22:56:29.101 - PortalControl Init() Finished
+20120614 22:56:29.103 - PageStructure Init() Started
+20120614 22:56:29.221 - PageStructure Init() Finished
+20120614 22:56:29.222 - Content-Database I/O Init() Started
+20120614 22:56:29.223 - Content-Database I/O ReInitAfter() Started
+20120614 22:56:29.240 - Content-Database I/O ReInitAfter() Finished
+20120614 22:56:29.242 - Content-Database I/O Init() Finished
+20120614 22:56:29.243 - TemplateManagement Init() Started
+20120614 22:56:29.244 - TemplateManagement ReInit() Started
+20120614 22:56:29.540 - TemplateManagement ReInit() Finished
+20120614 22:56:29.542 - TemplateManagement Init() Finished
+20120614 22:56:29.543 - UserControl Init() Started
+20120614 22:56:29.573 - UserControl Init() Finished
+20120614 22:56:29.574 - UserPermission Init() Started
+20120614 22:56:29.575 - UserPermission Init() Finished
+20120614 22:56:29.577 - FormHandler Started
+20120614 22:56:29.578 - FormHandler Finished
+20120614 22:56:29.579 - ContentSearch I/O Started
+20120614 22:56:29.908 - ContentSearch I/O Finished
+20120614 22:56:30.218 - System_ModuleManager Init() Started
+20120614 22:56:30.223 - System_ModuleManager Init() Finished
+20120614 22:56:30.923 - SLCMS_Utility Init() after variables.LogFolder set
+20120614 22:56:30.933 - SLCMS_Utility Init() Finished
+20120614 22:56:30.936 - Version Control-Master Init() Started
+20120614 22:56:30.940 - Version Control-Master Init() Finished
+20120614 22:56:31.560 - PortalControl Init() Started
+20120614 22:56:31.600 - PortalControl Init() Finished
+20120614 22:56:31.602 - PageStructure Init() Started
+20120614 22:56:31.687 - PageStructure Init() Finished
+20120614 22:56:31.688 - Content-Database I/O Init() Started
+20120614 22:56:31.690 - Content-Database I/O ReInitAfter() Started
+20120614 22:56:31.706 - Content-Database I/O ReInitAfter() Finished
+20120614 22:56:31.707 - Content-Database I/O Init() Finished
+20120614 22:56:31.709 - TemplateManagement Init() Started
+20120614 22:56:31.710 - TemplateManagement ReInit() Started
+20120614 22:56:31.991 - TemplateManagement ReInit() Finished
+20120614 22:56:31.993 - TemplateManagement Init() Finished
+20120614 22:56:31.994 - UserControl Init() Started
+20120614 22:56:32.31 - UserControl Init() Finished
+20120614 22:56:32.33 - UserPermission Init() Started
+20120614 22:56:32.34 - UserPermission Init() Finished
+20120614 22:56:32.35 - FormHandler Started
+20120614 22:56:32.38 - FormHandler Finished
+20120614 22:56:32.40 - ContentSearch I/O Started
+20120614 22:56:32.379 - ContentSearch I/O Finished
+20120614 22:56:32.751 - System_ModuleManager Init() Started
+20120614 22:56:32.755 - System_ModuleManager Init() Finished
+20120616 16:08:26.411 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:08:26.466 - SLCMS_Utility Init() Finished
+20120616 16:08:26.472 - Version Control-Master Init() Started
+20120616 16:08:26.476 - Version Control-Master Init() Finished
+20120616 16:08:27.122 - PortalControl Init() Started
+20120616 16:08:27.215 - PortalControl Init() Finished
+20120616 16:08:27.217 - PageStructure Init() Started
+20120616 16:08:27.347 - PageStructure Init() Finished
+20120616 16:08:27.348 - Content-Database I/O Init() Started
+20120616 16:08:27.349 - Content-Database I/O ReInitAfter() Started
+20120616 16:08:27.421 - Content-Database I/O ReInitAfter() Finished
+20120616 16:08:27.423 - Content-Database I/O Init() Finished
+20120616 16:08:27.424 - TemplateManagement Init() Started
+20120616 16:08:27.426 - TemplateManagement ReInit() Started
+20120616 16:08:28.65 - TemplateManagement ReInit() Finished
+20120616 16:08:28.66 - TemplateManagement Init() Finished
+20120616 16:08:28.68 - UserControl Init() Started
+20120616 16:08:28.152 - UserControl Init() Finished
+20120616 16:08:28.154 - UserPermission Init() Started
+20120616 16:08:28.155 - UserPermission Init() Finished
+20120616 16:08:28.156 - FormHandler Started
+20120616 16:08:28.158 - FormHandler Finished
+20120616 16:08:28.160 - ContentSearch I/O Started
+20120616 16:08:28.783 - ContentSearch I/O Finished
+20120616 16:08:29.166 - System_ModuleManager Init() Started
+20120616 16:08:29.170 - System_ModuleManager Init() Finished
+20120616 16:28:53.470 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:28:53.481 - SLCMS_Utility Init() Finished
+20120616 16:28:53.487 - Version Control-Master Init() Started
+20120616 16:28:53.491 - Version Control-Master Init() Finished
+20120616 16:28:54.96 - PortalControl Init() Started
+20120616 16:28:54.136 - PortalControl Init() Finished
+20120616 16:28:54.138 - PageStructure Init() Started
+20120616 16:28:54.206 - PageStructure Init() Finished
+20120616 16:28:54.207 - Content-Database I/O Init() Started
+20120616 16:28:54.208 - Content-Database I/O ReInitAfter() Started
+20120616 16:28:54.225 - Content-Database I/O ReInitAfter() Finished
+20120616 16:28:54.227 - Content-Database I/O Init() Finished
+20120616 16:28:54.228 - TemplateManagement Init() Started
+20120616 16:28:54.229 - TemplateManagement ReInit() Started
+20120616 16:28:54.509 - TemplateManagement ReInit() Finished
+20120616 16:28:54.510 - TemplateManagement Init() Finished
+20120616 16:28:54.511 - UserControl Init() Started
+20120616 16:28:54.540 - UserControl Init() Finished
+20120616 16:28:54.541 - UserPermission Init() Started
+20120616 16:28:54.542 - UserPermission Init() Finished
+20120616 16:28:54.543 - FormHandler Started
+20120616 16:28:54.544 - FormHandler Finished
+20120616 16:28:54.546 - ContentSearch I/O Started
+20120616 16:28:54.822 - ContentSearch I/O Finished
+20120616 16:28:55.149 - System_ModuleManager Init() Started
+20120616 16:28:55.154 - System_ModuleManager Init() Finished
+20120616 16:29:16.594 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:29:16.604 - SLCMS_Utility Init() Finished
+20120616 16:29:16.608 - Version Control-Master Init() Started
+20120616 16:29:16.611 - Version Control-Master Init() Finished
+20120616 16:29:17.199 - PortalControl Init() Started
+20120616 16:29:17.239 - PortalControl Init() Finished
+20120616 16:29:17.241 - PageStructure Init() Started
+20120616 16:29:17.308 - PageStructure Init() Finished
+20120616 16:29:17.309 - Content-Database I/O Init() Started
+20120616 16:29:17.311 - Content-Database I/O ReInitAfter() Started
+20120616 16:29:17.327 - Content-Database I/O ReInitAfter() Finished
+20120616 16:29:17.328 - Content-Database I/O Init() Finished
+20120616 16:29:17.330 - TemplateManagement Init() Started
+20120616 16:29:17.331 - TemplateManagement ReInit() Started
+20120616 16:29:17.604 - TemplateManagement ReInit() Finished
+20120616 16:29:17.605 - TemplateManagement Init() Finished
+20120616 16:29:17.607 - UserControl Init() Started
+20120616 16:29:17.635 - UserControl Init() Finished
+20120616 16:29:17.636 - UserPermission Init() Started
+20120616 16:29:17.637 - UserPermission Init() Finished
+20120616 16:29:17.639 - FormHandler Started
+20120616 16:29:17.640 - FormHandler Finished
+20120616 16:29:17.641 - ContentSearch I/O Started
+20120616 16:29:17.916 - ContentSearch I/O Finished
+20120616 16:29:18.221 - System_ModuleManager Init() Started
+20120616 16:29:18.225 - System_ModuleManager Init() Finished
+20120616 16:38:58.560 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:38:58.570 - SLCMS_Utility Init() Finished
+20120616 16:38:58.575 - Version Control-Master Init() Started
+20120616 16:38:58.604 - Version Control-Master Init() Finished
+20120616 16:38:59.207 - PortalControl Init() Started
+20120616 16:38:59.248 - PortalControl Init() Finished
+20120616 16:38:59.250 - PageStructure Init() Started
+20120616 16:38:59.318 - PageStructure Init() Finished
+20120616 16:38:59.319 - Content-Database I/O Init() Started
+20120616 16:38:59.321 - Content-Database I/O ReInitAfter() Started
+20120616 16:38:59.367 - Content-Database I/O ReInitAfter() Finished
+20120616 16:38:59.368 - Content-Database I/O Init() Finished
+20120616 16:38:59.369 - TemplateManagement Init() Started
+20120616 16:38:59.371 - TemplateManagement ReInit() Started
+20120616 16:38:59.636 - TemplateManagement ReInit() Finished
+20120616 16:38:59.637 - TemplateManagement Init() Finished
+20120616 16:38:59.638 - UserControl Init() Started
+20120616 16:38:59.668 - UserControl Init() Finished
+20120616 16:38:59.669 - UserPermission Init() Started
+20120616 16:38:59.671 - UserPermission Init() Finished
+20120616 16:38:59.672 - FormHandler Started
+20120616 16:38:59.673 - FormHandler Finished
+20120616 16:38:59.675 - ContentSearch I/O Started
+20120616 16:38:59.948 - ContentSearch I/O Finished
+20120616 16:39:00.260 - System_ModuleManager Init() Started
+20120616 16:39:00.264 - System_ModuleManager Init() Finished
+20120616 16:51:13.385 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:51:13.396 - SLCMS_Utility Init() Finished
+20120616 16:51:13.400 - Version Control-Master Init() Started
+20120616 16:51:13.404 - Version Control-Master Init() Finished
+20120616 16:51:14.12 - PortalControl Init() Started
+20120616 16:51:14.51 - PortalControl Init() Finished
+20120616 16:51:14.53 - PageStructure Init() Started
+20120616 16:51:14.124 - PageStructure Init() Finished
+20120616 16:51:14.125 - Content-Database I/O Init() Started
+20120616 16:51:14.126 - Content-Database I/O ReInitAfter() Started
+20120616 16:51:14.142 - Content-Database I/O ReInitAfter() Finished
+20120616 16:51:14.144 - Content-Database I/O Init() Finished
+20120616 16:51:14.145 - TemplateManagement Init() Started
+20120616 16:51:14.146 - TemplateManagement ReInit() Started
+20120616 16:51:14.429 - TemplateManagement ReInit() Finished
+20120616 16:51:14.430 - TemplateManagement Init() Finished
+20120616 16:51:14.432 - UserControl Init() Started
+20120616 16:51:14.460 - UserControl Init() Finished
+20120616 16:51:14.462 - UserPermission Init() Started
+20120616 16:51:14.463 - UserPermission Init() Finished
+20120616 16:51:14.464 - FormHandler Started
+20120616 16:51:14.465 - FormHandler Finished
+20120616 16:51:14.468 - ContentSearch I/O Started
+20120616 16:51:14.742 - ContentSearch I/O Finished
+20120616 16:51:15.47 - System_ModuleManager Init() Started
+20120616 16:51:15.51 - System_ModuleManager Init() Finished
+20120616 16:51:28.389 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:51:28.399 - SLCMS_Utility Init() Finished
+20120616 16:51:28.404 - Version Control-Master Init() Started
+20120616 16:51:28.407 - Version Control-Master Init() Finished
+20120616 16:51:28.992 - PortalControl Init() Started
+20120616 16:51:29.35 - PortalControl Init() Finished
+20120616 16:51:29.37 - PageStructure Init() Started
+20120616 16:51:29.109 - PageStructure Init() Finished
+20120616 16:51:29.111 - Content-Database I/O Init() Started
+20120616 16:51:29.114 - Content-Database I/O ReInitAfter() Started
+20120616 16:51:29.142 - Content-Database I/O ReInitAfter() Finished
+20120616 16:51:29.143 - Content-Database I/O Init() Finished
+20120616 16:51:29.145 - TemplateManagement Init() Started
+20120616 16:51:29.146 - TemplateManagement ReInit() Started
+20120616 16:51:29.423 - TemplateManagement ReInit() Finished
+20120616 16:51:29.424 - TemplateManagement Init() Finished
+20120616 16:51:29.425 - UserControl Init() Started
+20120616 16:51:29.456 - UserControl Init() Finished
+20120616 16:51:29.458 - UserPermission Init() Started
+20120616 16:51:29.459 - UserPermission Init() Finished
+20120616 16:51:29.460 - FormHandler Started
+20120616 16:51:29.461 - FormHandler Finished
+20120616 16:51:29.462 - ContentSearch I/O Started
+20120616 16:51:29.734 - ContentSearch I/O Finished
+20120616 16:51:30.46 - System_ModuleManager Init() Started
+20120616 16:51:30.50 - System_ModuleManager Init() Finished
+20120616 16:52:10.438 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:52:10.452 - SLCMS_Utility Init() Finished
+20120616 16:52:10.458 - Version Control-Master Init() Started
+20120616 16:52:10.462 - Version Control-Master Init() Finished
+20120616 16:52:11.61 - PortalControl Init() Started
+20120616 16:52:11.102 - PortalControl Init() Finished
+20120616 16:52:11.104 - PageStructure Init() Started
+20120616 16:52:11.171 - PageStructure Init() Finished
+20120616 16:52:11.172 - Content-Database I/O Init() Started
+20120616 16:52:11.173 - Content-Database I/O ReInitAfter() Started
+20120616 16:52:11.188 - Content-Database I/O ReInitAfter() Finished
+20120616 16:52:11.190 - Content-Database I/O Init() Finished
+20120616 16:52:11.191 - TemplateManagement Init() Started
+20120616 16:52:11.192 - TemplateManagement ReInit() Started
+20120616 16:52:11.488 - TemplateManagement ReInit() Finished
+20120616 16:52:11.489 - TemplateManagement Init() Finished
+20120616 16:52:11.490 - UserControl Init() Started
+20120616 16:52:11.520 - UserControl Init() Finished
+20120616 16:52:11.522 - UserPermission Init() Started
+20120616 16:52:11.523 - UserPermission Init() Finished
+20120616 16:52:11.524 - FormHandler Started
+20120616 16:52:11.525 - FormHandler Finished
+20120616 16:52:11.526 - ContentSearch I/O Started
+20120616 16:52:11.806 - ContentSearch I/O Finished
+20120616 16:52:12.127 - System_ModuleManager Init() Started
+20120616 16:52:12.132 - System_ModuleManager Init() Finished
+20120616 16:52:32.462 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:52:32.472 - SLCMS_Utility Init() Finished
+20120616 16:52:32.476 - Version Control-Master Init() Started
+20120616 16:52:32.480 - Version Control-Master Init() Finished
+20120616 16:52:33.52 - PortalControl Init() Started
+20120616 16:52:33.92 - PortalControl Init() Finished
+20120616 16:52:33.94 - PageStructure Init() Started
+20120616 16:52:33.188 - PageStructure Init() Finished
+20120616 16:52:33.189 - Content-Database I/O Init() Started
+20120616 16:52:33.191 - Content-Database I/O ReInitAfter() Started
+20120616 16:52:33.207 - Content-Database I/O ReInitAfter() Finished
+20120616 16:52:33.208 - Content-Database I/O Init() Finished
+20120616 16:52:33.210 - TemplateManagement Init() Started
+20120616 16:52:33.211 - TemplateManagement ReInit() Started
+20120616 16:52:33.484 - TemplateManagement ReInit() Finished
+20120616 16:52:33.485 - TemplateManagement Init() Finished
+20120616 16:52:33.486 - UserControl Init() Started
+20120616 16:52:33.515 - UserControl Init() Finished
+20120616 16:52:33.516 - UserPermission Init() Started
+20120616 16:52:33.518 - UserPermission Init() Finished
+20120616 16:52:33.519 - FormHandler Started
+20120616 16:52:33.520 - FormHandler Finished
+20120616 16:52:33.521 - ContentSearch I/O Started
+20120616 16:52:33.795 - ContentSearch I/O Finished
+20120616 16:52:34.106 - System_ModuleManager Init() Started
+20120616 16:52:34.110 - System_ModuleManager Init() Finished
+20120616 16:54:16.697 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:54:16.707 - SLCMS_Utility Init() Finished
+20120616 16:54:16.711 - Version Control-Master Init() Started
+20120616 16:54:16.714 - Version Control-Master Init() Finished
+20120616 16:54:17.309 - PortalControl Init() Started
+20120616 16:54:17.349 - PortalControl Init() Finished
+20120616 16:54:17.351 - PageStructure Init() Started
+20120616 16:54:17.417 - PageStructure Init() Finished
+20120616 16:54:17.419 - Content-Database I/O Init() Started
+20120616 16:54:17.420 - Content-Database I/O ReInitAfter() Started
+20120616 16:54:17.435 - Content-Database I/O ReInitAfter() Finished
+20120616 16:54:17.436 - Content-Database I/O Init() Finished
+20120616 16:54:17.437 - TemplateManagement Init() Started
+20120616 16:54:17.438 - TemplateManagement ReInit() Started
+20120616 16:54:17.712 - TemplateManagement ReInit() Finished
+20120616 16:54:17.714 - TemplateManagement Init() Finished
+20120616 16:54:17.715 - UserControl Init() Started
+20120616 16:54:17.743 - UserControl Init() Finished
+20120616 16:54:17.744 - UserPermission Init() Started
+20120616 16:54:17.745 - UserPermission Init() Finished
+20120616 16:54:17.747 - FormHandler Started
+20120616 16:54:17.748 - FormHandler Finished
+20120616 16:54:17.751 - ContentSearch I/O Started
+20120616 16:54:18.30 - ContentSearch I/O Finished
+20120616 16:54:18.336 - System_ModuleManager Init() Started
+20120616 16:54:18.340 - System_ModuleManager Init() Finished
+20120616 16:54:44.261 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 16:54:44.271 - SLCMS_Utility Init() Finished
+20120616 16:54:44.274 - Version Control-Master Init() Started
+20120616 16:54:44.278 - Version Control-Master Init() Finished
+20120616 16:54:44.905 - PortalControl Init() Started
+20120616 16:54:44.944 - PortalControl Init() Finished
+20120616 16:54:44.946 - PageStructure Init() Started
+20120616 16:54:45.12 - PageStructure Init() Finished
+20120616 16:54:45.13 - Content-Database I/O Init() Started
+20120616 16:54:45.15 - Content-Database I/O ReInitAfter() Started
+20120616 16:54:45.30 - Content-Database I/O ReInitAfter() Finished
+20120616 16:54:45.31 - Content-Database I/O Init() Finished
+20120616 16:54:45.32 - TemplateManagement Init() Started
+20120616 16:54:45.33 - TemplateManagement ReInit() Started
+20120616 16:54:45.295 - TemplateManagement ReInit() Finished
+20120616 16:54:45.296 - TemplateManagement Init() Finished
+20120616 16:54:45.297 - UserControl Init() Started
+20120616 16:54:45.325 - UserControl Init() Finished
+20120616 16:54:45.327 - UserPermission Init() Started
+20120616 16:54:45.328 - UserPermission Init() Finished
+20120616 16:54:45.329 - FormHandler Started
+20120616 16:54:45.331 - FormHandler Finished
+20120616 16:54:45.332 - ContentSearch I/O Started
+20120616 16:54:45.631 - ContentSearch I/O Finished
+20120616 16:54:45.935 - System_ModuleManager Init() Started
+20120616 16:54:45.940 - System_ModuleManager Init() Finished
+20120616 20:53:14.972 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 20:53:14.982 - SLCMS_Utility Init() Finished
+20120616 20:53:14.988 - Version Control-Master Init() Started
+20120616 20:53:14.992 - Version Control-Master Init() Finished
+20120616 20:53:15.608 - PortalControl Init() Started
+20120616 20:53:15.649 - PortalControl Init() Finished
+20120616 20:53:15.651 - PageStructure Init() Started
+20120616 20:53:15.872 - PageStructure Init() Finished
+20120616 20:53:15.874 - Content-Database I/O Init() Started
+20120616 20:53:15.876 - Content-Database I/O ReInitAfter() Started
+20120616 20:53:15.899 - Content-Database I/O ReInitAfter() Finished
+20120616 20:53:15.900 - Content-Database I/O Init() Finished
+20120616 20:53:15.902 - TemplateManagement Init() Started
+20120616 20:53:15.903 - TemplateManagement ReInit() Started
+20120616 20:53:16.222 - TemplateManagement ReInit() Finished
+20120616 20:53:16.223 - TemplateManagement Init() Finished
+20120616 20:53:16.224 - UserControl Init() Started
+20120616 20:53:16.253 - UserControl Init() Finished
+20120616 20:53:16.254 - UserPermission Init() Started
+20120616 20:53:16.256 - UserPermission Init() Finished
+20120616 20:53:16.257 - FormHandler Started
+20120616 20:53:16.258 - FormHandler Finished
+20120616 20:53:16.259 - ContentSearch I/O Started
+20120616 20:53:16.583 - ContentSearch I/O Finished
+20120616 20:53:16.903 - System_ModuleManager Init() Started
+20120616 20:53:16.907 - System_ModuleManager Init() Finished
+20120616 20:55:37.588 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 20:55:37.599 - SLCMS_Utility Init() Finished
+20120616 20:55:37.603 - Version Control-Master Init() Started
+20120616 20:55:37.607 - Version Control-Master Init() Finished
+20120616 20:55:38.219 - PortalControl Init() Started
+20120616 20:55:38.261 - PortalControl Init() Finished
+20120616 20:55:38.263 - PageStructure Init() Started
+20120616 20:55:38.334 - PageStructure Init() Finished
+20120616 20:55:38.335 - Content-Database I/O Init() Started
+20120616 20:55:38.337 - Content-Database I/O ReInitAfter() Started
+20120616 20:55:38.353 - Content-Database I/O ReInitAfter() Finished
+20120616 20:55:38.354 - Content-Database I/O Init() Finished
+20120616 20:55:38.355 - TemplateManagement Init() Started
+20120616 20:55:38.356 - TemplateManagement ReInit() Started
+20120616 20:55:38.655 - TemplateManagement ReInit() Finished
+20120616 20:55:38.656 - TemplateManagement Init() Finished
+20120616 20:55:38.657 - UserControl Init() Started
+20120616 20:55:38.686 - UserControl Init() Finished
+20120616 20:55:38.687 - UserPermission Init() Started
+20120616 20:55:38.688 - UserPermission Init() Finished
+20120616 20:55:38.689 - FormHandler Started
+20120616 20:55:38.690 - FormHandler Finished
+20120616 20:55:38.691 - ContentSearch I/O Started
+20120616 20:55:38.963 - ContentSearch I/O Finished
+20120616 20:55:39.286 - System_ModuleManager Init() Started
+20120616 20:55:39.290 - System_ModuleManager Init() Finished
+20120616 20:59:09.195 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 20:59:09.205 - SLCMS_Utility Init() Finished
+20120616 20:59:09.208 - Version Control-Master Init() Started
+20120616 20:59:09.212 - Version Control-Master Init() Finished
+20120616 20:59:09.789 - PortalControl Init() Started
+20120616 20:59:09.830 - PortalControl Init() Finished
+20120616 20:59:09.831 - PageStructure Init() Started
+20120616 20:59:09.910 - PageStructure Init() Finished
+20120616 20:59:09.911 - Content-Database I/O Init() Started
+20120616 20:59:09.912 - Content-Database I/O ReInitAfter() Started
+20120616 20:59:09.927 - Content-Database I/O ReInitAfter() Finished
+20120616 20:59:09.928 - Content-Database I/O Init() Finished
+20120616 20:59:09.929 - TemplateManagement Init() Started
+20120616 20:59:09.930 - TemplateManagement ReInit() Started
+20120616 20:59:10.198 - TemplateManagement ReInit() Finished
+20120616 20:59:10.199 - TemplateManagement Init() Finished
+20120616 20:59:10.200 - UserControl Init() Started
+20120616 20:59:10.229 - UserControl Init() Finished
+20120616 20:59:10.230 - UserPermission Init() Started
+20120616 20:59:10.231 - UserPermission Init() Finished
+20120616 20:59:10.232 - FormHandler Started
+20120616 20:59:10.233 - FormHandler Finished
+20120616 20:59:10.234 - ContentSearch I/O Started
+20120616 20:59:10.519 - ContentSearch I/O Finished
+20120616 20:59:10.845 - System_ModuleManager Init() Started
+20120616 20:59:10.849 - System_ModuleManager Init() Finished
+20120616 21:01:02.599 - SLCMS_Utility Init() after variables.LogFolder set
+20120616 21:01:02.609 - SLCMS_Utility Init() Finished
+20120616 21:01:02.612 - Version Control-Master Init() Started
+20120616 21:01:02.616 - Version Control-Master Init() Finished
+20120616 21:01:03.209 - PortalControl Init() Started
+20120616 21:01:03.248 - PortalControl Init() Finished
+20120616 21:01:03.250 - PageStructure Init() Started
+20120616 21:01:03.352 - PageStructure Init() Finished
+20120616 21:01:03.353 - Content-Database I/O Init() Started
+20120616 21:01:03.355 - Content-Database I/O ReInitAfter() Started
+20120616 21:01:03.370 - Content-Database I/O ReInitAfter() Finished
+20120616 21:01:03.371 - Content-Database I/O Init() Finished
+20120616 21:01:03.373 - TemplateManagement Init() Started
+20120616 21:01:03.374 - TemplateManagement ReInit() Started
+20120616 21:01:03.661 - TemplateManagement ReInit() Finished
+20120616 21:01:03.671 - TemplateManagement Init() Finished
+20120616 21:01:03.673 - UserControl Init() Started
+20120616 21:01:03.708 - UserControl Init() Finished
+20120616 21:01:03.710 - UserPermission Init() Started
+20120616 21:01:03.711 - UserPermission Init() Finished
+20120616 21:01:03.712 - FormHandler Started
+20120616 21:01:03.714 - FormHandler Finished
+20120616 21:01:03.715 - ContentSearch I/O Started
+20120616 21:01:04.10 - ContentSearch I/O Finished
+20120616 21:01:04.429 - System_ModuleManager Init() Started
+20120616 21:01:04.434 - System_ModuleManager Init() Finished
+20120617 21:28:16.153 - SLCMS_Utility Init() after variables.LogFolder set
+20120617 21:28:16.303 - SLCMS_Utility Init() Finished
+20120617 21:28:16.579 - Version Control-Master Init() Started
+20120617 21:28:16.586 - Version Control-Master Init() Finished
+20120617 21:28:22.399 - PortalControl Init() Started
+20120617 21:28:22.562 - PortalControl Init() Finished
+20120617 21:28:22.568 - PageStructure Init() Started
+20120617 21:28:22.785 - PageStructure Init() Finished
+20120617 21:28:22.787 - Content-Database I/O Init() Started
+20120617 21:28:22.789 - Content-Database I/O ReInitAfter() Started
+20120617 21:28:22.864 - Content-Database I/O ReInitAfter() Finished
+20120617 21:28:22.866 - Content-Database I/O Init() Finished
+20120617 21:28:22.868 - TemplateManagement Init() Started
+20120617 21:28:22.870 - TemplateManagement ReInit() Started
+20120617 21:28:23.701 - TemplateManagement ReInit() Finished
+20120617 21:28:23.703 - TemplateManagement Init() Finished
+20120617 21:28:23.705 - UserControl Init() Started
+20120617 21:28:23.787 - UserControl Init() Finished
+20120617 21:28:23.789 - UserPermission Init() Started
+20120617 21:28:23.792 - UserPermission Init() Finished
+20120617 21:28:23.797 - FormHandler Started
+20120617 21:28:23.800 - FormHandler Finished
+20120617 21:28:23.802 - ContentSearch I/O Started
+20120617 21:28:24.474 - ContentSearch I/O Finished
+20120617 21:28:25.503 - System_ModuleManager Init() Started
+20120617 21:28:25.514 - System_ModuleManager Init() Finished
+20120619 20:04:11.799 - SLCMS_Utility Init() after variables.LogFolder set
+20120619 20:04:11.818 - SLCMS_Utility Init() Finished
+20120619 20:04:11.825 - Version Control-Master Init() Started
+20120619 20:04:11.830 - Version Control-Master Init() Finished
+20120619 20:04:12.591 - PortalControl Init() Started
+20120619 20:04:12.743 - PortalControl Init() Finished
+20120619 20:04:12.745 - PageStructure Init() Started
+20120619 20:04:12.859 - PageStructure Init() Finished
+20120619 20:04:12.861 - Content-Database I/O Init() Started
+20120619 20:04:12.862 - Content-Database I/O ReInitAfter() Started
+20120619 20:04:12.939 - Content-Database I/O ReInitAfter() Finished
+20120619 20:04:12.941 - Content-Database I/O Init() Finished
+20120619 20:04:12.942 - TemplateManagement Init() Started
+20120619 20:04:12.943 - TemplateManagement ReInit() Started
+20120619 20:04:13.276 - TemplateManagement ReInit() Finished
+20120619 20:04:13.277 - TemplateManagement Init() Finished
+20120619 20:04:13.278 - UserControl Init() Started
+20120619 20:04:13.348 - UserControl Init() Finished
+20120619 20:04:13.349 - UserPermission Init() Started
+20120619 20:04:13.350 - UserPermission Init() Finished
+20120619 20:04:13.351 - FormHandler Started
+20120619 20:04:13.353 - FormHandler Finished
+20120619 20:04:13.354 - ContentSearch I/O Started
+20120619 20:04:13.834 - ContentSearch I/O Finished
+20120619 20:04:14.202 - System_ModuleManager Init() Started
+20120619 20:04:14.206 - System_ModuleManager Init() Finished
+20120619 20:08:38.379 - SLCMS_Utility Init() after variables.LogFolder set
+20120619 20:08:38.391 - SLCMS_Utility Init() Finished
+20120619 20:08:38.395 - Version Control-Master Init() Started
+20120619 20:08:38.399 - Version Control-Master Init() Finished
+20120619 20:08:39.146 - PortalControl Init() Started
+20120619 20:08:39.192 - PortalControl Init() Finished
+20120619 20:08:39.193 - PageStructure Init() Started
+20120619 20:08:39.276 - PageStructure Init() Finished
+20120619 20:08:39.277 - Content-Database I/O Init() Started
+20120619 20:08:39.279 - Content-Database I/O ReInitAfter() Started
+20120619 20:08:39.295 - Content-Database I/O ReInitAfter() Finished
+20120619 20:08:39.297 - Content-Database I/O Init() Finished
+20120619 20:08:39.298 - TemplateManagement Init() Started
+20120619 20:08:39.300 - TemplateManagement ReInit() Started
+20120619 20:08:39.609 - TemplateManagement ReInit() Finished
+20120619 20:08:39.610 - TemplateManagement Init() Finished
+20120619 20:08:39.611 - UserControl Init() Started
+20120619 20:08:39.687 - UserControl Init() Finished
+20120619 20:08:39.688 - UserPermission Init() Started
+20120619 20:08:39.689 - UserPermission Init() Finished
+20120619 20:08:39.691 - FormHandler Started
+20120619 20:08:39.693 - FormHandler Finished
+20120619 20:08:39.694 - ContentSearch I/O Started
+20120619 20:08:40.1 - ContentSearch I/O Finished
+20120619 20:08:40.309 - System_ModuleManager Init() Started
+20120619 20:08:40.314 - System_ModuleManager Init() Finished
+20120623 19:46:44.205 - SLCMS_Utility Init() after variables.LogFolder set
+20120623 19:46:44.369 - SLCMS_Utility Init() Finished
+20120623 19:46:44.494 - Version Control-Master Init() Started
+20120623 19:46:44.499 - Version Control-Master Init() Finished
+20120623 19:46:49.509 - PortalControl Init() Started
+20120623 19:46:49.716 - PortalControl Init() Finished
+20120623 19:46:49.720 - PageStructure Init() Started
+20120623 19:46:49.946 - PageStructure Init() Finished
+20120623 19:46:49.958 - Content-Database I/O Init() Started
+20120623 19:46:49.960 - Content-Database I/O ReInitAfter() Started
+20120623 19:46:50.30 - Content-Database I/O ReInitAfter() Finished
+20120623 19:46:50.32 - Content-Database I/O Init() Finished
+20120623 19:46:50.33 - TemplateManagement Init() Started
+20120623 19:46:50.35 - TemplateManagement ReInit() Started
+20120623 19:46:50.622 - TemplateManagement ReInit() Finished
+20120623 19:46:50.623 - TemplateManagement Init() Finished
+20120623 19:46:50.625 - UserControl Init() Started
+20120623 19:46:50.730 - UserControl Init() Finished
+20120623 19:46:50.732 - UserPermission Init() Started
+20120623 19:46:50.734 - UserPermission Init() Finished
+20120623 19:46:50.736 - FormHandler Started
+20120623 19:46:50.738 - FormHandler Finished
+20120623 19:46:50.740 - ContentSearch I/O Started
+20120623 19:46:51.323 - ContentSearch I/O Finished
+20120623 19:46:52.208 - System_ModuleManager Init() Started
+20120623 19:46:52.217 - System_ModuleManager Init() Finished
+20120623 22:10:50.387 - SLCMS_Utility Init() after variables.LogFolder set
+20120623 22:10:50.399 - SLCMS_Utility Init() Finished
+20120623 22:10:50.407 - Version Control-Master Init() Started
+20120623 22:10:50.411 - Version Control-Master Init() Finished
+20120623 22:10:51.115 - PortalControl Init() Started
+20120623 22:10:51.167 - PortalControl Init() Finished
+20120623 22:10:51.169 - PageStructure Init() Started
+20120623 22:10:51.266 - PageStructure Init() Finished
+20120623 22:10:51.268 - Content-Database I/O Init() Started
+20120623 22:10:51.270 - Content-Database I/O ReInitAfter() Started
+20120623 22:10:51.288 - Content-Database I/O ReInitAfter() Finished
+20120623 22:10:51.290 - Content-Database I/O Init() Finished
+20120623 22:10:51.291 - TemplateManagement Init() Started
+20120623 22:10:51.293 - TemplateManagement ReInit() Started
+20120623 22:10:51.620 - TemplateManagement ReInit() Finished
+20120623 22:10:51.621 - TemplateManagement Init() Finished
+20120623 22:10:51.622 - UserControl Init() Started
+20120623 22:10:51.656 - UserControl Init() Finished
+20120623 22:10:51.657 - UserPermission Init() Started
+20120623 22:10:51.659 - UserPermission Init() Finished
+20120623 22:10:51.660 - FormHandler Started
+20120623 22:10:51.661 - FormHandler Finished
+20120623 22:10:51.662 - ContentSearch I/O Started
+20120623 22:10:51.954 - ContentSearch I/O Finished
+20120623 22:10:52.308 - System_ModuleManager Init() Started
+20120623 22:10:52.312 - System_ModuleManager Init() Finished
+20120623 22:13:40.170 - SLCMS_Utility Init() after variables.LogFolder set
+20120623 22:13:40.195 - SLCMS_Utility Init() Finished
+20120623 22:13:40.222 - Version Control-Master Init() Started
+20120623 22:13:40.227 - Version Control-Master Init() Finished
+20120623 22:13:41.904 - PortalControl Init() Started
+20120623 22:13:42.10 - PortalControl Init() Finished
+20120623 22:13:42.13 - PageStructure Init() Started
+20120623 22:13:42.146 - PageStructure Init() Finished
+20120623 22:13:42.148 - Content-Database I/O Init() Started
+20120623 22:13:42.150 - Content-Database I/O ReInitAfter() Started
+20120623 22:13:42.174 - Content-Database I/O ReInitAfter() Finished
+20120623 22:13:42.176 - Content-Database I/O Init() Finished
+20120623 22:13:42.178 - TemplateManagement Init() Started
+20120623 22:13:42.180 - TemplateManagement ReInit() Started
+20120623 22:13:42.745 - TemplateManagement ReInit() Finished
+20120623 22:13:42.747 - TemplateManagement Init() Finished
+20120623 22:13:42.749 - UserControl Init() Started
+20120623 22:13:42.801 - UserControl Init() Finished
+20120623 22:13:42.803 - UserPermission Init() Started
+20120623 22:13:42.805 - UserPermission Init() Finished
+20120623 22:13:42.806 - FormHandler Started
+20120623 22:13:42.808 - FormHandler Finished
+20120623 22:13:42.810 - ContentSearch I/O Started
+20120623 22:13:43.307 - ContentSearch I/O Finished
+20120623 22:13:43.797 - System_ModuleManager Init() Started
+20120623 22:13:43.805 - System_ModuleManager Init() Finished
+20120623 22:16:02.456 - SLCMS_Utility Init() after variables.LogFolder set
+20120623 22:16:02.483 - SLCMS_Utility Init() Finished
+20120623 22:16:02.508 - Version Control-Master Init() Started
+20120623 22:16:02.514 - Version Control-Master Init() Finished
+20120623 22:16:04.290 - PortalControl Init() Started
+20120623 22:16:04.384 - PortalControl Init() Finished
+20120623 22:16:04.387 - PageStructure Init() Started
+20120623 22:16:04.563 - PageStructure Init() Finished
+20120623 22:16:04.565 - Content-Database I/O Init() Started
+20120623 22:16:04.566 - Content-Database I/O ReInitAfter() Started
+20120623 22:16:04.587 - Content-Database I/O ReInitAfter() Finished
+20120623 22:16:04.588 - Content-Database I/O Init() Finished
+20120623 22:16:04.590 - TemplateManagement Init() Started
+20120623 22:16:04.593 - TemplateManagement ReInit() Started
+20120623 22:16:05.35 - TemplateManagement ReInit() Finished
+20120623 22:16:05.37 - TemplateManagement Init() Finished
+20120623 22:16:05.39 - UserControl Init() Started
+20120623 22:16:05.98 - UserControl Init() Finished
+20120623 22:16:05.99 - UserPermission Init() Started
+20120623 22:16:05.101 - UserPermission Init() Finished
+20120623 22:16:05.103 - FormHandler Started
+20120623 22:16:05.105 - FormHandler Finished
+20120623 22:16:05.106 - ContentSearch I/O Started
+20120623 22:16:05.543 - ContentSearch I/O Finished
+20120623 22:16:06.77 - System_ModuleManager Init() Started
+20120623 22:16:06.87 - System_ModuleManager Init() Finished

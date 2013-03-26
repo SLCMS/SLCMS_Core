@@ -1,0 +1,1 @@
+<cfsilent><!--- inserts the name of the website ---></cfsilent><cfif thisTag.executionMode IS "start"><cfset thisTag.OurContent = application.SLCMS.config.base.SiteName /></cfif><cfif thisTag.executionMode IS "end"><cfset thisTag.GeneratedContent = "" /><cfoutput>#thisTag.OurContent#</cfoutput></cfif>

@@ -1,0 +1,275 @@
+<!--- mbc SLCMS CFCs  --->
+<!--- &copy; 2011 mort bay communications --->
+<!---  --->
+<!--- the Module Controller CFC for a SLCMS module --->
+<!--- provides the needed information for the module to be incorporated into SLCMS and provides global control functions to configure the module --->
+<!--- Contains:
+			getBaseDefinition() - provides the config to SLCMS's Module Manager'
+			initModule() - initialises the whole kit and kaboodle, inits all of this module's internal CFCs, CFCs to be stored persistently, etc
+			ReInitAfter() - reinitialises anything that might need it after a external change of any sort
+			
+			the above are the required minimum function set, you can add your own things with no issues as long as the three above are there
+			all of the below is cloned from a working module, the photogallery, after it was developed as the first, non database module so some of the comments fit that module as examples
+			 --->
+<!--- As an aside Kym likes to have structures looking pretty when she looks at dumps so she uses the alternate method of defining structs, etc
+				ret["error"] instead of ret.error and similar
+			Note also that this code has evolved all the way from CF 4.5 when it was training code for new mbcomms developers so some constructs are very old fashioned 
+			and when the decision was made to go opensource about the time that OpenBD and Railo appeared neither supported the shorthand struct and array constructors
+			so when we upgraded the code base and also moved a lot of code to CFCs we left a lot of code as it was, very old-fashioned :-)
+			 --->
+<!---  --->
+<!--- recreated:10th May 2011 by Kym K of mbcomms from working modules --->
+<!--- modified: 10th May 2011 - 15th May 2011 by Kym K, mbcomms: initial work on it --->
+<!--- modified: 20th Aug 2011 - 20th Aug 2011 by Kym K, mbcomms: added more getBaseDefinition() structs --->
+
+<cfcomponent displayname="Module Definition" hint="Defines what is in this Module and Initializes it" output="false">
+<!--- the ModuleController components are not persistent 
+			but we can set up the odd var in the pseudo constructor here to make maintence easy
+			 --->
+
+<cffunction name="getBaseDefinition" output="yes" returntype="struct" access="public"
+	displayname="get Base Definition"
+	hint="sends all the config info to SLCMS on a restart/reconfig/flush"
+	>
+	<!--- this function takes one argument --->
+	<cfargument name="ApplicationPaths" required="true" type="struct" hint="the application paths struct to get our paths from">
+
+	<!--- now all of the var declarations, first the standard return structure, I'd be surprised if it errored but use the shape anyway --->
+	<cfset var ret = StructNew() />	<!--- this is the return to the caller --->
+	<!--- load up the return structure with a clean, quasi-empty result --->
+	<cfset ret["error"] = StructNew() />
+	<cfset ret.error.ErrorCode = 0 />
+	<cfset ret.error.ErrorContext = "theModuleFriendlyName - Module ModuleController CFC: getBaseDefinition()" />
+	<cfset ret.error.ErrorText = "" />
+	<cfset ret.error.ErrorExtra = "" />
+	<cfset ret["Data"] = StructNew() />	<!--- set up an empty complete struct that will not make the module manager have a pink fit, we will fill in details below as needed for this module --->
+	<cfset ret.Data["CoreAdminAPI"] = StructNew() />	<!--- config for where core admin tasks can find things, these are not copied to app scope but handled by the module manager --->
+	<cfset ret.Data["Dependencies"] = StructNew() />	<!--- will be the other modules that this module depends on --->
+	<cfset ret.Data["DisplayTypes"] = StructNew() />	<!--- struct of what basic displays we can do, most of the time just one --->
+	<cfset ret.Data["Flags"] = StructNew() />	<!--- will be carry all of the flags to say we can and can't do stuff --->
+	<cfset ret.Data["ModuleAdmin"] = StructNew() />	<!--- related to the admin section of this module --->
+	<cfset ret.Data["ModuleNaming"] = StructNew() />	<!--- will be the name definitions --->
+	<cfset ret.Data["Paths"] = StructNew() />	<!--- where to find things --->
+	<cfset ret.Data["Search"] = StructNew() />	<!--- related to the admin section of this module --->
+	<cfset ret.Data["Users"] = StructNew() />	<!--- related to visitors, users and staff --->
+	<!--- now fill in blank defaults where we have to have them to stop upstream breaking --->
+	<cfset ret.Data.CoreAdminAPI["PageProperties"] = StructNew() />	<!--- we will set blank defaults --->
+	<cfset ret.Data.CoreAdminAPI.PageProperties.ContentSelectors = {} />	<!--- struct of types, one for each display type [DropDown|Radio|Checkbox|Popup] - chooses what type of selector display to use --->
+	<cfset ret.Data.CoreAdminAPI.PageProperties.SelectorList = "" />	<!--- List of items in display order, has to be from DisplayTypes.TypeList --->
+	<cfset ret.Data.CoreAdminAPI["Preprocessor"] = StructNew() />	<!--- these are the frontend tags that can be called before the module is displayed --->
+	<cfset ret.Data.CoreAdminAPI.Preprocessor.IncludeList = "" />	<!--- list of includes in calling order --->
+	<cfset ret.Data.CoreAdminAPI.Preprocessor.TagList = "" />	<!--- list of tags to call in calling order --->
+	<cfset ret.Data.Dependencies["Core"] = StructNew() />	<!--- will be the core functions that this module depends on (used to decide when to call this module's ReInitAfter function if something in the core changes like portals turned on) --->
+	<cfset ret.Data.Dependencies["Module"] = StructNew() />	<!--- ditto for other modules --->
+	<cfset ret.Data.Dependencies["System"] = StructNew() />	<!--- ditto for system stuff, do we need this? --->
+	<cfset ret.Data.Users["Roles"] = StructNew() />	<!--- roles flags related to visitors, users and staff --->
+	<cfset ret.Data.Users.Roles.ModuleHasStaffRoles = False />	<!--- whether this module has any roles for staff members --->
+	<cfset ret.Data.Users.Roles.ModuleHasPeopleRoles = False />	<!--- whether this module has any roles for Joe Public --->
+
+		
+		<!---   ***  this is the bit we edit to make this module go  ***   --->
+		
+	<cftry>
+		<cfif isStruct(arguments.ApplicationPaths) and structkeyexists(arguments.ApplicationPaths, "SitePhysicalRoot")>	<!--- simple check to make sure we have the right data to calculate paths from --->
+			<!--- tell SLCMS who we are are and what we do, etc --->
+			<cfset ret.Data.Dependencies.Core.ReInitFromCoreCFCList = "PortalControl" />	<!--- list of the core CFCs that this module depends on (used to decide when to call this module's ReInitAfter function) --->
+			<cfset ret.Data.Dependencies.Module.NeededModulesList = "" />	<!--- list of other modules that this module depends on, have to be there for this module to work --->
+			<cfset ret.Data.Dependencies.Module.ReInitFromModulesList = "" />	<!--- list of other modules that this module depends on (used to decide when to call this module's ReInitAfter function) --->
+			<cfset ret.Data.DisplayTypes.HasFrontEnd = True />	<!--- flag to show if the modules has frontend display ability --->
+			<cfset ret.Data.DisplayTypes.TypeList = "Type1,Type2" />	<!--- list of what basic displays we can do. only used if more than one, can be left blank --->
+			<!--- NOTE! edit these two as required and we must manually add in the structure of each display type if more than these --->
+			<cfset ret.Data.DisplayTypes.Type1 = StructNew() />	<!--- list of what basic displays we can do --->
+			<cfset ret.Data.DisplayTypes.Type1.Mode = "Template" />	<!--- flag to show which to show by default --->
+			<cfset ret.Data.DisplayTypes.Type1.Template = "DisplayType1.cfm" />	<!--- filename of the template to display this type --->
+			<cfset ret.Data.DisplayTypes.Type1.Tag = "displayModule1.cfm" />	<!--- filename of the tag to call from the core --->
+			<cfset ret.Data.DisplayTypes.Type2 = StructNew() />	<!--- list of what basic displays we can do --->
+			<cfset ret.Data.DisplayTypes.Type1.Mode = "Tag" />	<!--- flag to show which to show by default --->
+			<cfset ret.Data.DisplayTypes.Type2.Template = "DisplayType2.cfm" />	<!--- filename of the template to display this type --->
+			<cfset ret.Data.DisplayTypes.Type2.Tag = "displayModule2.cfm" />	<!--- filename of the tag to call from the core --->
+			<cfset ret.Data.Flags.PortalAware = False />	<!--- does not know about subsites so this can only be global --->
+			<cfset ret.Data.ModuleAdmin.AdminFolder = "Admin/" />	<!--- the folder that has the admin section --->
+			<cfset ret.Data.ModuleAdmin.AdminDefaultPage = "ModuleAdminHome.cfm" />	<!--- the name of the admin home include file for this module that will be called if no other specified --->
+			<cfset ret.Data.ModuleNaming.FormalName = "Empty_module" />	<!--- the name used by the system, must match the folder name it is installed in --->
+			<cfset ret.Data.ModuleNaming.FriendlyName = "Empty module" />	<!--- the name used in menus and admin and the like --->
+			<cfset ret.Data.ModuleNaming.Description = "SLCMS Empty Module as a sample to clone" />	<!--- description of what this module is all about --->
+			<cfset ret.Data.Paths.Templates = "Templates/" />	<!--- the folder that has templates to include --->
+			<cfset ret.Data.Paths.TemplateList = "Template1.cfm" />	<!--- all of the templates that you want to be selected in the page properties drop-down --->
+			<cfset ret.Data.Paths.TemplateDefault = "wrapper.cfm" />	<!--- the name of the default/global/main template include file that will be called if no template specified --->
+			<cfset ret.Data.Paths.TemplateTags = "TemplateTags/" />	<!--- the folder that has display tags for templates --->
+			<cfset ret.Data.Paths.TemplateTagsDefault = "displayModule.cfm" />	<!--- the name of the default/global/main template include file that will be called if no template specified --->
+			<cfset ret.Data.Search.ModuleIsSearchable = False />	<!--- can we search this module? --->
+			<cfset ret.Data.Search.Searches = {} />	
+			<cfset ret.Data.Users.Roles.ModuleHasStaffRoles = False />	<!--- whether this module has any roles for staff members --->
+			<cfset ret.Data.Users.Roles.ModuleHasPeopleRoles = False />	<!--- whether this module has any roles for Joe Public --->
+			<!--- now some API stuff --->
+			<!--- first the name of the standard CFC that acts as a wrapper for maost calls so it is the same everywhere, has to have a standard set of methods in it --->
+			<cfset ret.Data.CoreAdminAPI.CoreAPIcfcName = "API_Core" />	<!--- this is the standard API CFC name, we could change it if we want to --->
+			<!--- here we set what we can show in the core admin pages like page creation  --->
+			<!--- the below are copied from the SL_Photogallery Module as a typical example --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album = StructNew() />
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album.DisplayType = "Popup" />	<!--- DropDown|Radio|Checkbox|Popup - chooses what type of selector display to use --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album.ModuleSelectedHintText = "Choose an album from any Collection in any Gallery in this Site" />	<!--- a line of hint text that is shown after the module's name when it is selected --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album.ModuleWhatSelectionHint = "Album Selected:" />	<!--- a line of "What content type has been chosen" hint text that is shown to the right of the "Change Selection" button --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album.ConnectorType = "Page" />	<!--- [CFC|Page] whether we call a cfc or a page --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album.ConnectorPath = "ContentTypeSelector_Album.cfm" />	<!--- path to the above, just rel insde this module, the abs will be calculated by the controller --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album.CFC = "" />	<!--- null if its not a CFC --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Album.Method = "" />	<!--- null if its not a CFC --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Collection = {DisplayType="Popup", 
+																																							ModuleSelectedHintText = "Choose a single collection or choose to show a display of all of them", 
+																																							ModuleWhatSelectionHint = "Collection Selected:", 
+																																							ConnectorType="Page", 
+																																							ConnectorPath="ContentTypeSelector_Collection.cfm", CFC="", 
+																																							Method=""
+																																							} />	<!--- as above in shorthand (over many lines as its long) --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.ContentSelectors.Gallery =  {DisplayType="DropDown", 
+																																						ModuleSelectedHintText = "Choose a single gallery or choose to show a display of all of them", 
+																																						ModuleWhatSelectionHint = "Gallery Selected:", 
+																																						ConnectorType="CFC", 
+																																						CFC="API_CoreAdmin_PageProperties", ConnectorPath="",  
+																																						Method="getGalleryOptions"
+																																						} />	<!--- for a CFC we need the CFC to call and the relevant method --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.SelectorList = "Album,Collection,Gallery" />	<!--- List of items in display order, has to be from DisplayTypes.TypeList --->
+			<!--- if we are going to use a popup selector for content type selector then these are the URLs to reach the popup --->
+			<cfset ret.Data.CoreAdminAPI.Pageproperties.PopupURLs = {Album="",Collection="",Gallery=""} />	
+			<cfset ret.Data.CoreAdminAPI.Preprocessor.TagList = "GalleryGlobalSettings.cfm,WhereOnEarthAmI.cfm" />	<!--- list of tags to call in calling order --->
+			<!--- API section finished --->
+			
+			<!---   ***  end of edited section  ***   --->
+			
+			<!--- now a few calculated things, change if you are into exotica! :-) --->
+			<cfset ret.Data.ModuleAdmin.AdminRootURL_Rel = "#arguments.ApplicationPaths.ModulesRoot_Rel##ret.Data.ModuleNaming.FormalName#/#ret.Data.ModuleAdmin.AdminFolder#" />	<!--- root URL to the admin area --->
+			<cfset ret.Data.ModuleAdmin.AdminRootURL_Abs = "#arguments.ApplicationPaths.RootURL##ret.Data.ModuleAdmin.AdminRootURL_Rel#" />	<!--- root URL to the admin area --->
+			<cfset ret.Data.ModuleAdmin.AdminDefaultPageURL_Rel_Local = "#ret.Data.ModuleAdmin.AdminFolder##ret.Data.ModuleAdmin.AdminDefaultPage#" />	<!--- URL to this page, relative to this module's root --->
+			<cfset ret.Data.ModuleAdmin.AdminDefaultPageURL_Rel = "#ret.Data.ModuleAdmin.AdminRootURL_Rel##ret.Data.ModuleAdmin.AdminDefaultPage#" />	<!--- URL to this page, relative from site root --->
+			<cfset ret.Data.ModuleAdmin.AdminDefaultPageURL_Abs = "#arguments.ApplicationPaths.RootURL##ret.Data.ModuleAdmin.AdminDefaultPageURL_Rel#" />	<!--- URL to this page, absolute from site root --->
+			<cfset ret.Data.ModuleAdmin.AdminDefaultPagePhys_Abs = "#arguments.ApplicationPaths.SitePhysicalRoot##ret.Data.ModuleAdmin.AdminDefaultPageURL_Rel#" />	<!--- physical path to this page --->
+			<cfset ret.Data.ModuleAdmin.HasAdmin = fileExists(ret.Data.ModuleAdmin.AdminDefaultPagePhys_Abs) />	<!--- has an admin section to include in admin area --->
+			<cfset ret.Data.Flags.HasAdmin = ret.Data.ModuleAdmin.HasAdmin />
+			<cfset ret.Data.Paths.CFCRoot = '#replace("#arguments.ApplicationPaths.ModulesRoot_Rel#", "/", ".", "all")##ret.Data.ModuleNaming.FormalName#.CFCs.' />
+		<cfelse>
+			<cfset ret.error.ErrorCode =  BitOr(ret.error.ErrorCode, 1) />
+			<cfset ret.error.ErrorText = ret.error.ErrorText & "Oops! No ApplicationBaseConfig argument Supplied<br>" />
+			<cflog text='#ret.error.ErrorText# - ret.error.ErrorCode: #ret.error.ErrorCode# - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss")#'  file="#Application.Logging.theSiteLogName#" type="Error" application = "yes">
+		</cfif>
+	<cfcatch type="any">
+		<cfset ret.error.ErrorCode =  BitOr(ret.error.ErrorCode, 128) />
+		<cfset ret.error.ErrorText = ret.error.ErrorContext & ' Trapped. Site: #application.config.base.SiteName#, error message was: #cfcatch.message#, error detail was: #cfcatch.detail#' />
+		<cfset ret.error.ErrorExtra =  cfcatch.TagContext />
+		<cfif isArray(ret.error.ErrorExtra) and StructKeyExists(ret.error.ErrorExtra[1], "Raw_Trace")>
+			<cfset ret.error.ErrorText = ret.error.ErrorText & ", Line: #ListLast(cfcatch.TagContext[1].Raw_Trace, '#server.mbc_utility.serverconfig.OSPathDelim#')#" />
+		</cfif>
+		<cflog text='#ret.error.ErrorText# - ret.error.ErrorCode: #ret.error.ErrorCode# - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss")#'  file="#Application.Logging.theSiteLogName#" type="Error" application = "yes">
+		<cfif application.config.debug.debugmode>
+			getBaseDefinition() Trapped - error dump:<br>
+			<cfdump var="#ret.error.ErrorExtra#">
+		</cfif>
+	</cfcatch>
+	</cftry>
+	
+	<!--- return our data structure --->
+	<cfreturn ret  />
+</cffunction>
+
+<!--- initialize the various thingies, this should only be called after an app scope refresh --->
+<cffunction name="initModule" 
+	access="public" output="yes" returntype="any" 
+	displayname="Initializer"
+	hint="sets up the internal structures for this component"
+	>
+	<!--- this function needs.... --->
+	<cfargument name="ApplicationConfig" type="struct" required="true" />	<!--- the configuration structure, normally the Application.Config struct --->
+	<cfargument name="ModuleConfig" type="struct" required="true" />	<!--- the configuration structure for this module, needed as this method is called cold at startup, this CFC is not persistent --->
+
+	<!--- create the return structure, compulsory when talking to SLCMS core --->
+	<cfset var ret = StructNew() />
+	<!--- and load it up with a clean, empty result --->
+	<cfset ret.error = StructNew() />
+	<cfset ret.error.ErrorCode = 0 />
+	<cfset ret.error.ErrorContext = "Empty Module ModuleController CFC: initModule()" />
+	<cfset ret.error.ErrorText = "" />
+	<cfset ret.error.ErrorExtra = "" />
+	<cfset ret.Data = StructNew() />	<!--- and no data yet but it will probaly be a huge structure --->
+
+	<cfset variables.theConfig = arguments.ApplicationConfig />
+	<!--- again copied from the photogallery, tickle as needed for your module --->
+	<!--- first lets load in our persistent CFCs, etc --->
+	<!--- we drop then directly into the app scope, this module is quasi-dumb with no database or anything --->
+	<!--- first we set OnS variables as the init()s below use them --->
+	<cfset application.modules["#variables.theModuleFormalname#"].Paths.FileUploadPath_Phys = application.Paths_Common.UploadTempFolder_Phys & variables.theModuleFormalname & "/"  /> 
+	<cfset application.Modules["#variables.theModuleFormalname#"].functions = StructNew() />
+	<cfset application.Modules["#variables.theModuleFormalname#"].functions.Utilities_Persistent = createObject("component","#arguments.ModuleConfig.paths.moduleRootURLpath#CFCs/Persistent") /><!--- this CFC has functions and data that we need to be persistent --->
+	<cfset ret.Data.GalleryPersistentInit = application.Modules["#variables.theModuleFormalname#"].functions.Utilities_Persistent.init(ModuleFormalname="#variables.theModuleFormalname#") />
+	<cfset application.Modules["#variables.theModuleFormalname#"].functions.ImageManager = createObject("component","#arguments.ModuleConfig.paths.moduleRootURLpath#CFCs/ImageManager") /><!--- all the base, wrapper functions and data that we need to run frmo anywhere, not just within the module --->
+	<cfset ret.Data.ImageManagerInit = application.Modules["#variables.theModuleFormalname#"].functions.ImageManager.init(ModuleFormalname="#variables.theModuleFormalname#") />
+	<!--- and then check to make sure we have a folder structure or two to put the media in --->
+	<cfset temp1 = aCommonInitFunctionForExample() />
+<!--- 
+
+	<cfdump var="#arguments#" expand="false">
+
+ --->
+	
+	<cfreturn ret  />
+</cffunction>
+
+<cffunction name="ReInitAfter" output="yes" returntype="struct" access="public"
+	displayname="Re-Init After"
+	hint="re-initialize Module components after some external change"
+	>
+	<!--- this function needs.... --->
+	<cfargument name="Action" type="string" default="" hint="the action that took place in the caller, used to define the components that need re-initializing" />
+
+	<!--- now all of the var declarations, first the arguments which need manipulation --->
+	<cfset var theAction = trim(arguments.Action) />
+	<!--- now vars that will get filled as we go --->
+	<cfset var temp1 = False />	<!--- temp/throwaway var --->
+	<cfset var tempStruct2 = StructNew() />	<!--- temp/throwaway structure --->
+	<!--- then the standard return structure, not compulsory but a good standard if nothing else specified --->
+	<cfset var ret = StructNew() />	<!--- this is the return to the caller --->
+	<!--- load up the return structure with a clean, empty result --->
+	<cfset ret.error = StructNew() />
+	<cfset ret.error.ErrorCode = 0 />
+	<cfset ret.error.ErrorContext = "Empty Module ModuleController CFC: ReInitAfter(#theAction#)" />
+	<cfset ret.error.ErrorText = "" />
+	<cfset ret.error.ErrorExtra = "" />
+	<cfset ret.Data = "" />	<!--- and no data yet --->
+
+	<!--- wrap the whole thing in a try/catch in case something breaks --->
+	<cftry>
+		<!--- try each action in turn --->
+		<cfswitch expression="#theAction#">
+			<!--- pick action performed and run the relevant refreshes --->
+			<cfcase value="subSite">
+				<!--- a changed subSite needs to refresh CFCs that relate to that --->
+				<!--- see the core reInitAfter for sample code --->
+			</cfcase>
+			<cfdefaultcase>
+				<cfset ret.error.ErrorCode =  BitOr(ret.error.ErrorCode, 1) />
+				<cfset ret.error.ErrorText = ret.error.ErrorText & "Oops! No Action argument Supplied<br>" />
+			</cfdefaultcase>>
+		</cfswitch>
+		<cfif ret.error.ErrorCode neq 0>
+			<cflog text='#ret.error.ErrorText# - ret.error.ErrorCode: #ret.error.ErrorCode# - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss")#'  file="#Application.Logging.theSiteLogName#" type="Error" application = "yes">
+		</cfif>
+	<cfcatch type="any">
+		<cfset ret.error.ErrorCode =  BitOr(ret.error.ErrorCode, 128) />
+		<cfset ret.error.ErrorText = ret.error.ErrorContext & ' Trapped. Site: #application.config.base.SiteName#, error message was: #cfcatch.message#, error detail was: #cfcatch.detail#' />
+		<cfset ret.error.ErrorExtra =  cfcatch.TagContext />
+		<cfif isArray(ret.error.ErrorExtra) and StructKeyExists(ret.error.ErrorExtra[1], "Raw_Trace")>
+			<cfset ret.error.ErrorText = ret.error.ErrorText & ", Line: #ListLast(cfcatch.TagContext[1].Raw_Trace, '#server.mbc_utility.serverconfig.OSPathDelim#')#" />
+		</cfif>
+		<cflog text='#ret.error.ErrorText# - ret.error.ErrorCode: #ret.error.ErrorCode# - Time: #DateFormat(Now(),"YYYYMMDD")#-#TimeFormat(now(),"HH:mm:ss")#'  file="#Application.Logging.theSiteLogName#" type="Error" application = "yes">
+		<cfif application.config.debug.debugmode>
+			<cfoutput>#ret.error.ErrorContext#</cfoutput> Trapped - error dump:<br>
+			<cfdump var="#cfcatch#">
+		</cfif>
+	</cfcatch>
+	</cftry>
+
+	<!--- return our data structure --->
+	<cfreturn ret  />
+</cffunction>
+
+
+</cfcomponent>
+

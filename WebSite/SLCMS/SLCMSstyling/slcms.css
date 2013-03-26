@@ -1,0 +1,181 @@
+/*
+	This is the base set of styles for the CMS's presentation
+	such as the content container's styles, the dotted edge in edit mode, etc.
+*/
+/*
+<!--- modified: 22nd Dec 2007 - 23rd Dec 2007 by Fiona & Kym K - mbcomms: added styling for save & cancel buttons under editor area to aid usability --->
+<!--- modified: 27th Jun 2008 - 23rd Dec 2007 by Kym K - mbcomms: added base styling for body to be overidden later but just in case --->
+*/
+
+/* set base page styling for error pages, etc. this should get overwritten by the template styling */
+html {
+	font-size:100.01%;
+}
+body {
+	font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif;
+	font-size:0.86em;
+}
+strong {
+	font-weight:bolder;
+}
+/*
+ * Styling for content containers when in edit mode, etc
+ */
+.EditorSpace {
+  width: 99%;
+}
+.BlogContainer_Marker {
+	border: 1px dashed Gray;
+}
+.BlogContainer_Wrapper {
+	margin: 5px 0px 0px 0px;
+	padding: 2px 2px 2px 4px;
+/*	border: 1px solid Gray;*/
+}
+.BlogContainer_Controls {
+	padding: 2px 0px 0 0px;
+	float: right;
+}
+.BlogContainer_ControlButtons {
+
+}
+
+.ContentContainer_Controls_Clear {
+	clear:none; 
+	line-height:0px;
+	margin:0px;
+	padding:0px;
+}
+
+.ContentContainer_Wrapper {
+	font-size:1em;
+}
+.ContentContainer_Marker {
+	border: 1px dashed Gray;
+}
+.ContentContainer_ControlsMarker {
+	border:dotted thin;
+	padding: 2px 0px 0px 0px;
+}
+.ContentContainer_Controls {
+	font-weight:bold;
+	text-align:center;
+	display: none;
+}
+.ContentContainer_Controls .ContentContainer_Controls_Heading {
+	padding-left: 10px;
+	text-align:left;
+/*	float: left; */
+}
+.ContentContainer_Controls .ContentContainer_Controls_EditButton {
+	padding-right:2px;
+	float: right;
+}
+.ContentContainer_Center {
+     font-weight: normal;
+     font-size: 0.86em;	
+}
+
+.ContentContainer_UnderButtonsWrapper {
+	padding: 2px 0px 0px 0px;
+}
+.ContentContainer_UnderButtonsLeft {
+	padding: 0px 0px 0px 0px;
+	float: left;
+}
+.ContentContainer_UnderButtonsHelp {
+	padding: 0px 5px 0px 0px;
+    float:right;
+}
+#ContentContainer_WikiHelpShowButton {
+  display: none; 
+  }
+#ContentContainer_WikiHelpText {
+  font-size: 0.86em;
+  display: inline; 
+ }
+.ContentContainer_ControlButtons {
+
+ }
+.ContentContainer_ControlButtonsUnder {
+	width: 60px;
+	height: 16px;
+	border: 0px;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}	
+	
+.ContentContainer_ControlButtonsOver {
+	width: 60px;
+	height: 16px;
+	border: 0px;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;	
+}
+
+.emphNavItem {
+	font-style:italic;
+}
+
+
+.wikiContainer_Content_Wrapper {
+	border: 1px solid Gray;
+}
+.wikiContainer_Tab_Wrapper {
+	border: 1px solid Gray;
+}
+
+.wikiEditLink {
+  background-color: #FFE088; 
+}  
+.ErrorHandlerWrapper {
+  background-color: #FFE088; 
+	color : #FF3333
+}  
+
+/*
+ * the default styling for the search page
+ */
+
+.SearchResultsHeading {
+	font-size:1em;
+	margin:5px 0px 0px 0px; 
+	padding:5px 5px 5px 5px;
+  border:solid #CCCCCC;
+  border-width:2px 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.SearchResultsHeading h1 {
+	font-size:1.1em;
+	font-weight:bold;
+	padding:3px;
+}
+.SearchResultsHeading h2 {
+	font-size:1.0em;
+	font-weight:bold;
+	padding:3px;
+}
+
+.SearchResultsWrapper {
+	margin:5px 0px 0px 0px; 
+	padding:5px 5px 5px 5px;
+  border:solid #CCCCCC;
+  border-width:2px 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.SingleResultWrapper_Odd {
+	background-color:#EEEEFF;
+	padding:5px 5px 5px 5px;
+	margin:1px;
+}
+.SingleResultWrapper_Even {
+	background-color:#FEFEFE;
+	padding:5px 5px 5px 5px;
+	margin:1px;
+}
+
+
